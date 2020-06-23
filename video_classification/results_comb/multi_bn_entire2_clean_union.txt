@@ -1,0 +1,135 @@
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='multi_bn_entire2_clean', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-06-16 23:34:20.493884
+
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='multi_bn_entire2_clean', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-06-16 23:35:52.500406
+
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='multi_bn_entire2_clean', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-06-16 23:37:06.858570
+
+id: 1523, acc: 100.00: 
+
+0:00:07.694077,       2020-06-16 23:37:14.552658
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='multi_bn_entire2_clean', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-06-16 23:39:19.337044
+
+id: 1523, acc: 100.00: 
+
+0:00:07.404496,       2020-06-16 23:39:26.741550
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='multi_bn_entire2_clean', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-06-16 23:41:13.177442
+
+id: 1524, acc: 100.00: 
+id: 1525, acc: 100.00: 
+id: 1526, acc: 100.00: 
+id: 1527, acc: 100.00: 
+id: 1528, acc: 100.00: 
+id: 1529, acc: 83.33: 
+id: 1530, acc: 71.43: 
+id: 1531, acc: 75.00: 
+id: 1532, acc: 66.67: 
+id: 1533, acc: 60.00: 
+id: 1534, acc: 54.55: 
+id: 1535, acc: 58.33: 
+id: 1536, acc: 61.54: 
+id: 1537, acc: 57.14: 
+id: 1538, acc: 60.00: 
+id: 1539, acc: 62.50: 
+id: 1540, acc: 64.71: 
+id: 1541, acc: 61.11: 
+id: 1542, acc: 63.16: 
+id: 1543, acc: 60.00: 
+id: 1544, acc: 57.14: 
+id: 1545, acc: 59.09: 
+id: 1546, acc: 56.52: 
+id: 1547, acc: 58.33: 
+id: 1548, acc: 56.00: 
+id: 1549, acc: 53.85: 
+id: 1550, acc: 51.85: 
+id: 1551, acc: 50.00: 
+id: 1552, acc: 48.28: 
+id: 1553, acc: 50.00: 
+id: 1554, acc: 51.61: 
+id: 1555, acc: 53.12: 
+id: 1556, acc: 51.52: 
+id: 1557, acc: 52.94: 
+id: 1558, acc: 51.43: 
+id: 1559, acc: 52.78: 
+id: 1560, acc: 54.05: 
+id: 1561, acc: 52.63: 
+id: 1562, acc: 51.28: 
+id: 1563, acc: 50.00: 
+id: 1564, acc: 48.78: 
+id: 1565, acc: 50.00: 
+id: 1566, acc: 51.16: 
+id: 1567, acc: 52.27: 
+id: 1568, acc: 53.33: 
+id: 1569, acc: 54.35: 
+id: 1570, acc: 55.32: 
+id: 1571, acc: 56.25: 
+id: 1572, acc: 55.10: 
+id: 1573, acc: 56.00: 
+id: 1574, acc: 54.90: 
+id: 1575, acc: 53.85: 
+id: 1576, acc: 54.72: 
+id: 1577, acc: 55.56: 
+id: 1578, acc: 56.36: 
+id: 1579, acc: 57.14: 
+id: 1580, acc: 57.89: 
+id: 1581, acc: 58.62: 
+id: 1582, acc: 59.32: 
+id: 1583, acc: 60.00: 
+id: 1584, acc: 60.66: 
+id: 1585, acc: 61.29: 
+id: 1586, acc: 60.32: 
+id: 1587, acc: 59.38: 
+id: 1588, acc: 58.46: 
+id: 1589, acc: 57.58: 
+id: 1590, acc: 56.72: 
+id: 1591, acc: 57.35: 
+id: 1592, acc: 57.97: 
+id: 1593, acc: 58.57: 
+id: 1594, acc: 59.15: 
+id: 1595, acc: 59.72: 
+id: 1596, acc: 60.27: 
+id: 1597, acc: 60.81: 
+id: 1598, acc: 61.33: 
+id: 1599, acc: 61.84: 
+id: 1600, acc: 62.34: 
+id: 1601, acc: 61.54: 
+id: 1602, acc: 62.03: 
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='multi_bn_entire2_clean', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-06-19 20:34:46.074261
+
+id: 1524, acc: 100.00: 
+id: 1525, acc: 100.00: 

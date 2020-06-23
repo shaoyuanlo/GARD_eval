@@ -1,0 +1,1271 @@
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-27 23:31:39.038187
+
+id: 0001, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0002, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0003, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 90.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 90.91, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 91.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 92.31, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 92.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0015, acc: 93.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 93.75, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0017, acc: 94.12, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 94.44, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 94.74, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0020, acc: 95.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 95.24, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 95.45, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 95.65, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 95.83, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 96.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 96.15, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 96.30, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 96.43, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 96.55, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 96.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 96.77, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 96.88, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0033, acc: 96.97, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0034, acc: 97.06, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0035, acc: 97.14, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0036, acc: 97.22, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0037, acc: 97.30, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0038, acc: 97.37, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0039, acc: 94.87, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0040, acc: 95.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0041, acc: 95.12, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0042, acc: 95.24, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-27 23:32:13.129558
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 42.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 55.56, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 45.45, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0012, acc: 41.67, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0013, acc: 38.46, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0014, acc: 42.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0015, acc: 46.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 43.75, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0017, acc: 47.06, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 52.63, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0020, acc: 55.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 57.14, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 59.09, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 60.87, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 62.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 64.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 65.38, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 67.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 68.97, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 70.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 70.97, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 71.88, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0033, acc: 69.70, label: 1 ApplyEyeMakeup, predict: 60 PlayingDaf
+id: 0034, acc: 70.59, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0035, acc: 68.57, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0036, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0037, acc: 64.86, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0038, acc: 63.16, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0039, acc: 61.54, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0040, acc: 62.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0041, acc: 63.41, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0042, acc: 64.29, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0043, acc: 62.79, label: 1 ApplyEyeMakeup, predict: 50 Knitting
+id: 0044, acc: 61.36, label: 1 ApplyEyeMakeup, predict: 50 Knitting
+id: 0045, acc: 60.00, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0046, acc: 58.70, label: 2 ApplyLipstick, predict: 78 ShavingBeard
+id: 0047, acc: 57.45, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0048, acc: 58.33, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0049, acc: 59.18, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0050, acc: 58.00, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0051, acc: 56.86, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0052, acc: 55.77, label: 2 ApplyLipstick, predict: 76 Rowing
+id: 0053, acc: 54.72, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0054, acc: 53.70, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0055, acc: 52.73, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0056, acc: 51.79, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0057, acc: 50.88, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0058, acc: 50.00, label: 2 ApplyLipstick, predict: 78 ShavingBeard
+id: 0059, acc: 49.15, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0060, acc: 48.33, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0061, acc: 49.18, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0062, acc: 50.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0063, acc: 49.21, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0064, acc: 48.44, label: 2 ApplyLipstick, predict: 14 BlowingCandles
+id: 0065, acc: 47.69, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0066, acc: 46.97, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0067, acc: 46.27, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0068, acc: 45.59, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0069, acc: 44.93, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0070, acc: 44.29, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0071, acc: 43.66, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0072, acc: 43.06, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0073, acc: 42.47, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0074, acc: 41.89, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0075, acc: 41.33, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0076, acc: 40.79, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0077, acc: 40.26, label: 3 Archery, predict: 35 Hammering
+id: 0078, acc: 39.74, label: 3 Archery, predict: 36 HammerThrow
+id: 0079, acc: 40.51, label: 3 Archery, predict: 3 Archery
+id: 0080, acc: 41.25, label: 3 Archery, predict: 3 Archery
+id: 0081, acc: 40.74, label: 3 Archery, predict: 50 Knitting
+id: 0082, acc: 40.24, label: 3 Archery, predict: 32 FrontCrawl
+id: 0083, acc: 39.76, label: 3 Archery, predict: 35 Hammering
+id: 0084, acc: 39.29, label: 3 Archery, predict: 52 Lunges
+id: 0085, acc: 38.82, label: 3 Archery, predict: 52 Lunges
+id: 0086, acc: 39.53, label: 3 Archery, predict: 3 Archery
+id: 0087, acc: 40.23, label: 3 Archery, predict: 3 Archery
+id: 0088, acc: 40.91, label: 3 Archery, predict: 3 Archery
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-27 23:36:50.136845
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 42.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 55.56, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 45.45, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 41.67, label: 2 ApplyLipstick, predict: 78 ShavingBeard
+id: 0013, acc: 38.46, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 42.86, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0015, acc: 46.67, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0016, acc: 43.75, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0017, acc: 41.18, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0018, acc: 38.89, label: 2 ApplyLipstick, predict: 76 Rowing
+id: 0019, acc: 36.84, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0020, acc: 35.00, label: 3 Archery, predict: 35 Hammering
+id: 0021, acc: 33.33, label: 3 Archery, predict: 36 HammerThrow
+id: 0022, acc: 36.36, label: 3 Archery, predict: 3 Archery
+id: 0023, acc: 39.13, label: 3 Archery, predict: 3 Archery
+id: 0024, acc: 37.50, label: 3 Archery, predict: 50 Knitting
+id: 0025, acc: 36.00, label: 3 Archery, predict: 32 FrontCrawl
+id: 0026, acc: 34.62, label: 3 Archery, predict: 35 Hammering
+id: 0027, acc: 33.33, label: 3 Archery, predict: 52 Lunges
+id: 0028, acc: 32.14, label: 3 Archery, predict: 52 Lunges
+id: 0029, acc: 34.48, label: 3 Archery, predict: 3 Archery
+id: 0030, acc: 36.67, label: 3 Archery, predict: 3 Archery
+id: 0031, acc: 38.71, label: 3 Archery, predict: 3 Archery
+id: 0032, acc: 37.50, label: 3 Archery, predict: 52 Lunges
+id: 0033, acc: 36.36, label: 3 Archery, predict: 6 BandMarching
+id: 0034, acc: 38.24, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0035, acc: 37.14, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+Namespace(attack_bn='clean', attack_iter=5, attack_type='roa', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-27 23:39:08.605836
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 60.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 71.43, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 77.78, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 70.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 63.64, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 58.33, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 53.85, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 50.00, label: 2 ApplyLipstick, predict: 78 ShavingBeard
+id: 0015, acc: 53.33, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0016, acc: 50.00, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0017, acc: 52.94, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0018, acc: 55.56, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0019, acc: 52.63, label: 2 ApplyLipstick, predict: 74 RockClimbingIndoor
+id: 0020, acc: 50.00, label: 3 Archery, predict: 35 Hammering
+id: 0021, acc: 47.62, label: 3 Archery, predict: 36 HammerThrow
+id: 0022, acc: 50.00, label: 3 Archery, predict: 3 Archery
+id: 0023, acc: 52.17, label: 3 Archery, predict: 3 Archery
+id: 0024, acc: 50.00, label: 3 Archery, predict: 50 Knitting
+id: 0025, acc: 48.00, label: 3 Archery, predict: 56 Nunchucks
+id: 0026, acc: 46.15, label: 3 Archery, predict: 35 Hammering
+id: 0027, acc: 48.15, label: 3 Archery, predict: 3 Archery
+id: 0028, acc: 50.00, label: 3 Archery, predict: 3 Archery
+id: 0029, acc: 51.72, label: 3 Archery, predict: 3 Archery
+id: 0030, acc: 53.33, label: 3 Archery, predict: 3 Archery
+id: 0031, acc: 54.84, label: 3 Archery, predict: 3 Archery
+id: 0032, acc: 56.25, label: 3 Archery, predict: 3 Archery
+id: 0033, acc: 57.58, label: 3 Archery, predict: 3 Archery
+id: 0034, acc: 58.82, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0035, acc: 57.14, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0036, acc: 58.33, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0037, acc: 56.76, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0038, acc: 57.89, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0039, acc: 58.97, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0040, acc: 57.50, label: 4 BabyCrawling, predict: 72 PushUps
+id: 0041, acc: 58.54, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0042, acc: 59.52, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0043, acc: 60.47, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0044, acc: 59.09, label: 5 BalanceBeam, predict: 58 PizzaTossing
+id: 0045, acc: 57.78, label: 5 BalanceBeam, predict: 58 PizzaTossing
+id: 0046, acc: 56.52, label: 5 BalanceBeam, predict: 78 ShavingBeard
+id: 0047, acc: 57.45, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0048, acc: 58.33, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0049, acc: 59.18, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0050, acc: 60.00, label: 5 BalanceBeam, predict: 5 BalanceBeam
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-27 23:40:24.721979
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 42.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 55.56, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 45.45, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 41.67, label: 2 ApplyLipstick, predict: 78 ShavingBeard
+id: 0013, acc: 38.46, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 42.86, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0015, acc: 46.67, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0016, acc: 43.75, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0017, acc: 41.18, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0018, acc: 38.89, label: 2 ApplyLipstick, predict: 76 Rowing
+id: 0019, acc: 36.84, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0020, acc: 35.00, label: 3 Archery, predict: 35 Hammering
+id: 0021, acc: 33.33, label: 3 Archery, predict: 36 HammerThrow
+id: 0022, acc: 36.36, label: 3 Archery, predict: 3 Archery
+id: 0023, acc: 39.13, label: 3 Archery, predict: 3 Archery
+id: 0024, acc: 37.50, label: 3 Archery, predict: 50 Knitting
+id: 0025, acc: 36.00, label: 3 Archery, predict: 88 Surfing
+id: 0026, acc: 34.62, label: 3 Archery, predict: 35 Hammering
+id: 0027, acc: 33.33, label: 3 Archery, predict: 52 Lunges
+id: 0028, acc: 32.14, label: 3 Archery, predict: 52 Lunges
+id: 0029, acc: 34.48, label: 3 Archery, predict: 3 Archery
+id: 0030, acc: 36.67, label: 3 Archery, predict: 3 Archery
+id: 0031, acc: 38.71, label: 3 Archery, predict: 3 Archery
+id: 0032, acc: 37.50, label: 3 Archery, predict: 52 Lunges
+id: 0033, acc: 36.36, label: 3 Archery, predict: 6 BandMarching
+id: 0034, acc: 38.24, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0035, acc: 37.14, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0036, acc: 38.89, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0037, acc: 37.84, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0038, acc: 39.47, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0039, acc: 41.03, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0040, acc: 40.00, label: 4 BabyCrawling, predict: 72 PushUps
+id: 0041, acc: 41.46, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0042, acc: 40.48, label: 4 BabyCrawling, predict: 72 PushUps
+id: 0043, acc: 39.53, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-27 23:59:41.424260
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 42.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 55.56, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 45.45, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-28 00:00:13.432760
+
+id: 0001, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0002, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0003, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 100.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 90.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 90.91, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0012, acc: 91.67, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0013, acc: 84.62, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 85.71, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0015, acc: 86.67, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0016, acc: 87.50, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-28 00:10:55.192998
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 42.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 55.56, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 45.45, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 41.67, label: 2 ApplyLipstick, predict: 78 ShavingBeard
+id: 0013, acc: 38.46, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+Namespace(attack_bn='clean', attack_iter=5, attack_type='roa', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-28 00:12:47.628576
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 60.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 71.43, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+Namespace(attack_bn='clean', attack_iter=5, attack_type='framing', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-28 00:13:09.276461
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0003, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+Namespace(attack_bn='clean', attack_iter=5, attack_type='framing', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-28 00:13:29.723976
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0003, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 72.73, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 75.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0013, acc: 69.23, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 71.43, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0015, acc: 73.33, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0016, acc: 75.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0017, acc: 76.47, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0018, acc: 77.78, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0019, acc: 78.95, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0020, acc: 75.00, label: 3 Archery, predict: 35 Hammering
+id: 0021, acc: 71.43, label: 3 Archery, predict: 67 PlayingViolin
+id: 0022, acc: 68.18, label: 3 Archery, predict: 93 ThrowDiscus
+id: 0023, acc: 65.22, label: 3 Archery, predict: 93 ThrowDiscus
+id: 0024, acc: 62.50, label: 3 Archery, predict: 32 FrontCrawl
+id: 0025, acc: 60.00, label: 3 Archery, predict: 32 FrontCrawl
+id: 0026, acc: 57.69, label: 3 Archery, predict: 35 Hammering
+id: 0027, acc: 55.56, label: 3 Archery, predict: 10 BenchPress
+id: 0028, acc: 57.14, label: 3 Archery, predict: 3 Archery
+id: 0029, acc: 58.62, label: 3 Archery, predict: 3 Archery
+id: 0030, acc: 56.67, label: 3 Archery, predict: 10 BenchPress
+id: 0031, acc: 58.06, label: 3 Archery, predict: 3 Archery
+id: 0032, acc: 56.25, label: 3 Archery, predict: 10 BenchPress
+id: 0033, acc: 57.58, label: 3 Archery, predict: 3 Archery
+id: 0034, acc: 58.82, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0035, acc: 60.00, label: 4 BabyCrawling, predict: 4 BabyCrawling
+Namespace(attack_bn='clean', attack_iter=5, attack_type='one', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-28 00:14:28.910021
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 53 MilitaryParade
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 53 MilitaryParade
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 28.57, label: 1 ApplyEyeMakeup, predict: 74 RockClimbingIndoor
+id: 0008, acc: 25.00, label: 1 ApplyEyeMakeup, predict: 74 RockClimbingIndoor
+id: 0009, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 30.00, label: 1 ApplyEyeMakeup, predict: 53 MilitaryParade
+id: 0011, acc: 27.27, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 25.00, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 23.08, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 21.43, label: 2 ApplyLipstick, predict: 53 MilitaryParade
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-28 00:29:44.878364
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 28.57, label: 1 ApplyEyeMakeup, predict: 4 BabyCrawling
+id: 0008, acc: 25.00, label: 1 ApplyEyeMakeup, predict: 58 PizzaTossing
+id: 0009, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 30.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+Namespace(attack_bn='clean', attack_iter=5, attack_type='one', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-28 00:30:09.115689
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 42.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 55.56, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 45.45, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 41.67, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 38.46, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 35.71, label: 2 ApplyLipstick, predict: 95 Typing
+id: 0015, acc: 40.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0016, acc: 43.75, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0017, acc: 47.06, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0018, acc: 50.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0019, acc: 52.63, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0020, acc: 50.00, label: 3 Archery, predict: 35 Hammering
+id: 0021, acc: 47.62, label: 3 Archery, predict: 36 HammerThrow
+id: 0022, acc: 50.00, label: 3 Archery, predict: 3 Archery
+id: 0023, acc: 52.17, label: 3 Archery, predict: 3 Archery
+id: 0024, acc: 50.00, label: 3 Archery, predict: 94 TrampolineJumping
+id: 0025, acc: 48.00, label: 3 Archery, predict: 32 FrontCrawl
+id: 0026, acc: 46.15, label: 3 Archery, predict: 35 Hammering
+id: 0027, acc: 48.15, label: 3 Archery, predict: 3 Archery
+id: 0028, acc: 50.00, label: 3 Archery, predict: 3 Archery
+id: 0029, acc: 51.72, label: 3 Archery, predict: 3 Archery
+id: 0030, acc: 53.33, label: 3 Archery, predict: 3 Archery
+id: 0031, acc: 54.84, label: 3 Archery, predict: 3 Archery
+id: 0032, acc: 56.25, label: 3 Archery, predict: 3 Archery
+id: 0033, acc: 57.58, label: 3 Archery, predict: 3 Archery
+id: 0034, acc: 55.88, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0035, acc: 54.29, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0036, acc: 52.78, label: 4 BabyCrawling, predict: 73 Rafting
+id: 0037, acc: 51.35, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0038, acc: 52.63, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0039, acc: 53.85, label: 4 BabyCrawling, predict: 4 BabyCrawling
+Namespace(attack_bn='clean', attack_iter=5, attack_type='framing', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_b32_3bn/save_6.pth
+
+2020-02-28 00:31:17.934279
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 39 HeadMassage
+id: 0002, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0003, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 71.43, label: 1 ApplyEyeMakeup, predict: 53 MilitaryParade
+id: 0008, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 77.78, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 70.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 63.64, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 66.67, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0013, acc: 61.54, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 64.29, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0015, acc: 66.67, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0016, acc: 68.75, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0017, acc: 70.59, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0018, acc: 66.67, label: 2 ApplyLipstick, predict: 53 MilitaryParade
+id: 0019, acc: 68.42, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0020, acc: 65.00, label: 3 Archery, predict: 55 MoppingFloor
+id: 0021, acc: 61.90, label: 3 Archery, predict: 55 MoppingFloor
+id: 0022, acc: 63.64, label: 3 Archery, predict: 3 Archery
+id: 0023, acc: 60.87, label: 3 Archery, predict: 55 MoppingFloor
+id: 0024, acc: 58.33, label: 3 Archery, predict: 50 Knitting
+id: 0025, acc: 56.00, label: 3 Archery, predict: 53 MilitaryParade
+id: 0026, acc: 53.85, label: 3 Archery, predict: 35 Hammering
+id: 0027, acc: 55.56, label: 3 Archery, predict: 3 Archery
+id: 0028, acc: 53.57, label: 3 Archery, predict: 52 Lunges
+id: 0029, acc: 55.17, label: 3 Archery, predict: 3 Archery
+id: 0030, acc: 56.67, label: 3 Archery, predict: 3 Archery
+id: 0031, acc: 58.06, label: 3 Archery, predict: 3 Archery
+id: 0032, acc: 59.38, label: 3 Archery, predict: 3 Archery
+id: 0033, acc: 60.61, label: 3 Archery, predict: 3 Archery
+id: 0034, acc: 61.76, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0035, acc: 62.86, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0036, acc: 63.89, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0037, acc: 62.16, label: 4 BabyCrawling, predict: 72 PushUps
+id: 0038, acc: 60.53, label: 4 BabyCrawling, predict: 53 MilitaryParade
+id: 0039, acc: 61.54, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0040, acc: 60.00, label: 4 BabyCrawling, predict: 53 MilitaryParade
+id: 0041, acc: 60.98, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0042, acc: 59.52, label: 4 BabyCrawling, predict: 53 MilitaryParade
+id: 0043, acc: 58.14, label: 4 BabyCrawling, predict: 53 MilitaryParade
+id: 0044, acc: 59.09, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0045, acc: 60.00, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0046, acc: 58.70, label: 5 BalanceBeam, predict: 97 VolleyballSpiking
+id: 0047, acc: 59.57, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0048, acc: 60.42, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0049, acc: 61.22, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0050, acc: 62.00, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0051, acc: 62.75, label: 5 BalanceBeam, predict: 5 BalanceBeam
+id: 0052, acc: 61.54, label: 6 BandMarching, predict: 53 MilitaryParade
+id: 0053, acc: 60.38, label: 6 BandMarching, predict: 53 MilitaryParade
+id: 0054, acc: 61.11, label: 6 BandMarching, predict: 6 BandMarching
+id: 0055, acc: 61.82, label: 6 BandMarching, predict: 6 BandMarching
+id: 0056, acc: 60.71, label: 6 BandMarching, predict: 53 MilitaryParade
+id: 0057, acc: 59.65, label: 6 BandMarching, predict: 53 MilitaryParade
+id: 0058, acc: 60.34, label: 6 BandMarching, predict: 6 BandMarching
+id: 0059, acc: 59.32, label: 6 BandMarching, predict: 53 MilitaryParade
+id: 0060, acc: 58.33, label: 6 BandMarching, predict: 53 MilitaryParade
+id: 0061, acc: 59.02, label: 6 BandMarching, predict: 6 BandMarching
+id: 0062, acc: 59.68, label: 6 BandMarching, predict: 6 BandMarching
+id: 0063, acc: 60.32, label: 6 BandMarching, predict: 6 BandMarching
+id: 0064, acc: 60.94, label: 6 BandMarching, predict: 6 BandMarching
+id: 0065, acc: 61.54, label: 6 BandMarching, predict: 6 BandMarching
+id: 0066, acc: 60.61, label: 7 BaseballPitch, predict: 84 SoccerJuggling
+id: 0067, acc: 59.70, label: 7 BaseballPitch, predict: 84 SoccerJuggling
+id: 0068, acc: 58.82, label: 7 BaseballPitch, predict: 33 GolfSwing
+id: 0069, acc: 57.97, label: 7 BaseballPitch, predict: 84 SoccerJuggling
+id: 0070, acc: 57.14, label: 7 BaseballPitch, predict: 33 GolfSwing
+id: 0071, acc: 56.34, label: 7 BaseballPitch, predict: 33 GolfSwing
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_batch32_3bn/save_3.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_batch32_3bn/save_3.pth
+
+2020-02-28 00:33:13.329032
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 28.57, label: 1 ApplyEyeMakeup, predict: 4 BabyCrawling
+id: 0008, acc: 25.00, label: 1 ApplyEyeMakeup, predict: 58 PizzaTossing
+id: 0009, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 30.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 27.27, label: 2 ApplyLipstick, predict: 95 Typing
+id: 0012, acc: 25.00, label: 2 ApplyLipstick, predict: 78 ShavingBeard
+id: 0013, acc: 23.08, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 21.43, label: 2 ApplyLipstick, predict: 95 Typing
+id: 0015, acc: 20.00, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0016, acc: 18.75, label: 2 ApplyLipstick, predict: 95 Typing
+id: 0017, acc: 17.65, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 16.67, label: 2 ApplyLipstick, predict: 95 Typing
+id: 0019, acc: 15.79, label: 2 ApplyLipstick, predict: 31 FrisbeeCatch
+id: 0020, acc: 15.00, label: 3 Archery, predict: 35 Hammering
+id: 0021, acc: 14.29, label: 3 Archery, predict: 36 HammerThrow
+id: 0022, acc: 13.64, label: 3 Archery, predict: 35 Hammering
+id: 0023, acc: 13.04, label: 3 Archery, predict: 35 Hammering
+id: 0024, acc: 12.50, label: 3 Archery, predict: 50 Knitting
+id: 0025, acc: 12.00, label: 3 Archery, predict: 88 Surfing
+id: 0026, acc: 11.54, label: 3 Archery, predict: 35 Hammering
+id: 0027, acc: 11.11, label: 3 Archery, predict: 52 Lunges
+id: 0028, acc: 10.71, label: 3 Archery, predict: 52 Lunges
+id: 0029, acc: 10.34, label: 3 Archery, predict: 6 BandMarching
+id: 0030, acc: 10.00, label: 3 Archery, predict: 6 BandMarching
+id: 0031, acc: 9.68, label: 3 Archery, predict: 52 Lunges
+id: 0032, acc: 9.38, label: 3 Archery, predict: 6 BandMarching
+id: 0033, acc: 9.09, label: 3 Archery, predict: 6 BandMarching
+id: 0034, acc: 8.82, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0035, acc: 8.57, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0036, acc: 8.33, label: 4 BabyCrawling, predict: 10 BenchPress
+id: 0037, acc: 8.11, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0038, acc: 10.53, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0039, acc: 12.82, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0040, acc: 12.50, label: 4 BabyCrawling, predict: 72 PushUps
+id: 0041, acc: 12.20, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0042, acc: 11.90, label: 4 BabyCrawling, predict: 72 PushUps
+id: 0043, acc: 11.63, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_batch32_3bn/save_3.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_test_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_batch32_3bn/save_3.pth
+
+2020-02-28 00:41:29.448981
+
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_batch32_3bn/save_3.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_batch32_3bn/save_3.pth
+
+2020-02-28 00:45:39.056481
+
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=32, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_batch32_3bn/save_3.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet18_batch32_3bn/save_3.pth
+
+2020-02-28 00:46:25.760694
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 25.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 40.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 57.14, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 62.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 60.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 63.64, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 69.23, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 71.43, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0015, acc: 73.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0017, acc: 76.47, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 77.78, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 78.95, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0020, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 80.95, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 81.82, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 82.61, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 84.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 84.62, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 85.19, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 86.21, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 86.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 87.10, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0033, acc: 87.88, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0034, acc: 88.24, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0035, acc: 88.57, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0036, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0037, acc: 89.19, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0038, acc: 89.47, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0039, acc: 89.74, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0040, acc: 90.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0041, acc: 90.24, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0042, acc: 90.48, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0043, acc: 88.37, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0044, acc: 88.64, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0045, acc: 86.67, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0046, acc: 86.96, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0047, acc: 85.11, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0048, acc: 85.42, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0049, acc: 85.71, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0050, acc: 86.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0051, acc: 86.27, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-02-28 13:57:34.238562
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0003, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 81.82, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 84.62, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0015, acc: 86.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0017, acc: 88.24, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 89.47, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0020, acc: 90.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 90.48, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 90.91, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 91.30, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 91.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 92.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 92.31, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 92.59, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 92.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 93.10, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 93.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 93.55, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 93.75, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0033, acc: 93.94, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0034, acc: 94.12, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0035, acc: 94.29, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0036, acc: 94.44, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0037, acc: 94.59, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0038, acc: 94.74, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0039, acc: 92.31, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0040, acc: 92.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0041, acc: 92.68, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0042, acc: 92.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0043, acc: 90.70, label: 1 ApplyEyeMakeup, predict: 50 Knitting
+id: 0044, acc: 88.64, label: 1 ApplyEyeMakeup, predict: 50 Knitting
+id: 0045, acc: 88.89, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0046, acc: 89.13, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0047, acc: 87.23, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0048, acc: 87.50, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0049, acc: 87.76, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0050, acc: 88.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0051, acc: 88.24, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0052, acc: 88.46, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0053, acc: 88.68, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-02-28 13:58:12.621507
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 28.57, label: 1 ApplyEyeMakeup, predict: 4 BabyCrawling
+id: 0008, acc: 25.00, label: 1 ApplyEyeMakeup, predict: 58 PizzaTossing
+id: 0009, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 30.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 36.36, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0013, acc: 30.77, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0014, acc: 28.57, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0015, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 31.25, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0017, acc: 35.29, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 38.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 42.11, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0020, acc: 45.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 47.62, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 52.17, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 54.17, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 56.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 57.69, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 59.26, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 60.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 62.07, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 63.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 64.52, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 65.62, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0033, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0034, acc: 67.65, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0035, acc: 68.57, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0036, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0037, acc: 67.57, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0038, acc: 65.79, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0039, acc: 64.10, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0040, acc: 65.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0041, acc: 65.85, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0042, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0043, acc: 65.12, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0044, acc: 63.64, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0045, acc: 62.22, label: 2 ApplyLipstick, predict: 95 Typing
+id: 0046, acc: 60.87, label: 2 ApplyLipstick, predict: 78 ShavingBeard
+Namespace(attack_bn='clean', attack_iter=5, attack_type='roa', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-02-28 13:59:29.977186
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 60.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 71.43, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 77.78, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 70.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 72.73, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 76.92, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 78.57, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0015, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 81.25, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0017, acc: 82.35, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 84.21, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0020, acc: 85.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 86.36, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 86.96, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 88.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 88.46, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 89.29, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 89.66, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 90.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 90.32, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 90.62, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0033, acc: 90.91, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0034, acc: 91.18, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0035, acc: 91.43, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0036, acc: 91.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0037, acc: 91.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0038, acc: 92.11, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+Namespace(attack_bn='clean', attack_iter=5, attack_type='framing', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-02-28 14:00:38.398293
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 39 HeadMassage
+id: 0002, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0003, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 81.82, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 84.62, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0015, acc: 86.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0017, acc: 88.24, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 89.47, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0020, acc: 90.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 90.48, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 90.91, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 91.30, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 91.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 92.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 92.31, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 92.59, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 92.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 93.10, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 93.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 93.55, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 93.75, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0033, acc: 93.94, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0034, acc: 94.12, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0035, acc: 94.29, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0036, acc: 94.44, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0037, acc: 94.59, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0038, acc: 94.74, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0039, acc: 92.31, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0040, acc: 92.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0041, acc: 92.68, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0042, acc: 92.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0043, acc: 90.70, label: 1 ApplyEyeMakeup, predict: 50 Knitting
+id: 0044, acc: 88.64, label: 1 ApplyEyeMakeup, predict: 50 Knitting
+id: 0045, acc: 86.67, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0046, acc: 86.96, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0047, acc: 85.11, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0048, acc: 85.42, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0049, acc: 85.71, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0050, acc: 86.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0051, acc: 86.27, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0052, acc: 86.54, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0053, acc: 86.79, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0054, acc: 85.19, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0055, acc: 83.64, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0056, acc: 82.14, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0057, acc: 80.70, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0058, acc: 81.03, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0059, acc: 81.36, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0060, acc: 81.67, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0061, acc: 81.97, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0062, acc: 82.26, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0063, acc: 82.54, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0064, acc: 81.25, label: 2 ApplyLipstick, predict: 14 BlowingCandles
+id: 0065, acc: 80.00, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0066, acc: 78.79, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0067, acc: 79.10, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0068, acc: 77.94, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0069, acc: 78.26, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0070, acc: 78.57, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0071, acc: 78.87, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0072, acc: 79.17, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0073, acc: 79.45, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0074, acc: 79.73, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0075, acc: 80.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0076, acc: 80.26, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0077, acc: 79.22, label: 3 Archery, predict: 35 Hammering
+id: 0078, acc: 79.49, label: 3 Archery, predict: 3 Archery
+id: 0079, acc: 79.75, label: 3 Archery, predict: 3 Archery
+id: 0080, acc: 78.75, label: 3 Archery, predict: 55 MoppingFloor
+id: 0081, acc: 77.78, label: 3 Archery, predict: 50 Knitting
+id: 0082, acc: 76.83, label: 3 Archery, predict: 32 FrontCrawl
+id: 0083, acc: 75.90, label: 3 Archery, predict: 35 Hammering
+id: 0084, acc: 76.19, label: 3 Archery, predict: 3 Archery
+id: 0085, acc: 76.47, label: 3 Archery, predict: 3 Archery
+id: 0086, acc: 76.74, label: 3 Archery, predict: 3 Archery
+id: 0087, acc: 77.01, label: 3 Archery, predict: 3 Archery
+id: 0088, acc: 77.27, label: 3 Archery, predict: 3 Archery
+id: 0089, acc: 77.53, label: 3 Archery, predict: 3 Archery
+id: 0090, acc: 77.78, label: 3 Archery, predict: 3 Archery
+id: 0091, acc: 76.92, label: 3 Archery, predict: 33 GolfSwing
+id: 0092, acc: 77.17, label: 3 Archery, predict: 3 Archery
+id: 0093, acc: 76.34, label: 3 Archery, predict: 6 BandMarching
+id: 0094, acc: 75.53, label: 3 Archery, predict: 75 RopeClimbing
+id: 0095, acc: 75.79, label: 3 Archery, predict: 3 Archery
+id: 0096, acc: 76.04, label: 3 Archery, predict: 3 Archery
+id: 0097, acc: 76.29, label: 3 Archery, predict: 3 Archery
+id: 0098, acc: 76.53, label: 3 Archery, predict: 3 Archery
+id: 0099, acc: 75.76, label: 3 Archery, predict: 46 JugglingBalls
+id: 0100, acc: 75.00, label: 3 Archery, predict: 46 JugglingBalls
+id: 0101, acc: 74.26, label: 3 Archery, predict: 46 JugglingBalls
+id: 0102, acc: 73.53, label: 3 Archery, predict: 46 JugglingBalls
+id: 0103, acc: 72.82, label: 3 Archery, predict: 46 JugglingBalls
+id: 0104, acc: 72.12, label: 3 Archery, predict: 22 CliffDiving
+id: 0105, acc: 71.43, label: 3 Archery, predict: 35 Hammering
+id: 0106, acc: 70.75, label: 3 Archery, predict: 56 Nunchucks
+id: 0107, acc: 70.09, label: 3 Archery, predict: 56 Nunchucks
+id: 0108, acc: 69.44, label: 3 Archery, predict: 56 Nunchucks
+id: 0109, acc: 68.81, label: 3 Archery, predict: 75 RopeClimbing
+id: 0110, acc: 68.18, label: 3 Archery, predict: 74 RockClimbingIndoor
+id: 0111, acc: 67.57, label: 3 Archery, predict: 56 Nunchucks
+id: 0112, acc: 67.86, label: 3 Archery, predict: 3 Archery
+id: 0113, acc: 68.14, label: 3 Archery, predict: 3 Archery
+id: 0114, acc: 67.54, label: 3 Archery, predict: 75 RopeClimbing
+id: 0115, acc: 66.96, label: 3 Archery, predict: 35 Hammering
+id: 0116, acc: 66.38, label: 3 Archery, predict: 75 RopeClimbing
+id: 0117, acc: 65.81, label: 3 Archery, predict: 67 PlayingViolin
+id: 0118, acc: 66.10, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0119, acc: 66.39, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0120, acc: 66.67, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0121, acc: 66.94, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0122, acc: 67.21, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0123, acc: 67.48, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0124, acc: 67.74, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0125, acc: 68.00, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0126, acc: 68.25, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0127, acc: 68.50, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0128, acc: 67.97, label: 4 BabyCrawling, predict: 41 HorseRace
+id: 0129, acc: 67.44, label: 4 BabyCrawling, predict: 73 Rafting
+id: 0130, acc: 66.92, label: 4 BabyCrawling, predict: 74 RockClimbingIndoor
+id: 0131, acc: 67.18, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0132, acc: 67.42, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0133, acc: 67.67, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0134, acc: 67.91, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0135, acc: 68.15, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0136, acc: 68.38, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0137, acc: 67.88, label: 4 BabyCrawling, predict: 72 PushUps
+id: 0138, acc: 67.39, label: 4 BabyCrawling, predict: 72 PushUps
+id: 0139, acc: 66.91, label: 4 BabyCrawling, predict: 72 PushUps
+id: 0140, acc: 67.14, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0141, acc: 67.38, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0142, acc: 66.90, label: 4 BabyCrawling, predict: 16 Bowling
+id: 0143, acc: 66.43, label: 4 BabyCrawling, predict: 32 FrontCrawl
+id: 0144, acc: 65.97, label: 4 BabyCrawling, predict: 39 HeadMassage
+id: 0145, acc: 65.52, label: 4 BabyCrawling, predict: 39 HeadMassage
+id: 0146, acc: 65.75, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0147, acc: 65.99, label: 4 BabyCrawling, predict: 4 BabyCrawling
+id: 0148, acc: 66.22, label: 4 BabyCrawling, predict: 4 BabyCrawling
+Namespace(attack_bn='clean', attack_iter=5, attack_type='one', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-02-28 14:04:37.042869
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 42.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 55.56, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 54.55, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 58.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 61.54, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 64.29, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0015, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 62.50, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0017, acc: 64.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 63.16, label: 1 ApplyEyeMakeup, predict: 46 JugglingBalls
+id: 0020, acc: 65.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 68.18, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 69.57, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 70.83, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 72.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 73.08, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 74.07, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 75.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 76.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 77.42, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 78.12, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0033, acc: 78.79, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0034, acc: 79.41, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0035, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0036, acc: 80.56, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0037, acc: 81.08, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0038, acc: 81.58, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0039, acc: 79.49, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0040, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0041, acc: 80.49, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0042, acc: 80.95, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0043, acc: 79.07, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0044, acc: 77.27, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0045, acc: 75.56, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0046, acc: 73.91, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0047, acc: 72.34, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0048, acc: 70.83, label: 2 ApplyLipstick, predict: 95 Typing
+id: 0049, acc: 71.43, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+Namespace(attack_bn='clean', attack_iter=5, attack_type='clean', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-02-28 14:09:37.212099
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0003, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0004, acc: 75.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0005, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0008, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0009, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 80.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 81.82, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 83.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0013, acc: 84.62, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0014, acc: 85.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0015, acc: 86.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 87.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0017, acc: 88.24, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 88.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 89.47, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0020, acc: 90.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 90.48, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 90.91, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 91.30, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 91.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 92.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 92.31, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 92.59, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 92.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 93.10, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 93.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 93.55, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 93.75, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0033, acc: 93.94, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0034, acc: 94.12, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0035, acc: 94.29, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0036, acc: 94.44, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0037, acc: 94.59, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0038, acc: 94.74, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0039, acc: 92.31, label: 1 ApplyEyeMakeup, predict: 34 Haircut
+id: 0040, acc: 92.50, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0041, acc: 92.68, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0042, acc: 92.86, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0043, acc: 90.70, label: 1 ApplyEyeMakeup, predict: 50 Knitting
+id: 0044, acc: 88.64, label: 1 ApplyEyeMakeup, predict: 50 Knitting
+id: 0045, acc: 88.89, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0046, acc: 89.13, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0047, acc: 87.23, label: 2 ApplyLipstick, predict: 1 ApplyEyeMakeup
+id: 0048, acc: 87.50, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0049, acc: 87.76, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0050, acc: 88.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0051, acc: 88.24, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0052, acc: 88.46, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0053, acc: 88.68, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0054, acc: 87.04, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0055, acc: 85.45, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0056, acc: 83.93, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0057, acc: 82.46, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0058, acc: 82.76, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0059, acc: 83.05, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0060, acc: 83.33, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0061, acc: 83.61, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0062, acc: 83.87, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0063, acc: 82.54, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0064, acc: 81.25, label: 2 ApplyLipstick, predict: 14 BlowingCandles
+id: 0065, acc: 81.54, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0066, acc: 80.30, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0067, acc: 79.10, label: 2 ApplyLipstick, predict: 20 BrushingTeeth
+id: 0068, acc: 79.41, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0069, acc: 79.71, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0070, acc: 80.00, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0071, acc: 80.28, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0072, acc: 80.56, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0073, acc: 80.82, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0074, acc: 81.08, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0075, acc: 81.33, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0076, acc: 81.58, label: 2 ApplyLipstick, predict: 2 ApplyLipstick
+id: 0077, acc: 80.52, label: 3 Archery, predict: 35 Hammering
+id: 0078, acc: 80.77, label: 3 Archery, predict: 3 Archery
+id: 0079, acc: 81.01, label: 3 Archery, predict: 3 Archery
+id: 0080, acc: 81.25, label: 3 Archery, predict: 3 Archery
+Namespace(attack_bn='clean', attack_iter=5, attack_type='framing', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-02-28 16:57:07.858008
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 39 HeadMassage
+id: 0002, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0003, acc: 66.67, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-03-03 10:50:14.050981
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 28.57, label: 1 ApplyEyeMakeup, predict: 4 BabyCrawling
+id: 0008, acc: 25.00, label: 1 ApplyEyeMakeup, predict: 58 PizzaTossing
+id: 0009, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 30.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+id: 0011, acc: 36.36, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0012, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0013, acc: 30.77, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0014, acc: 28.57, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0015, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0016, acc: 31.25, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0017, acc: 35.29, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0018, acc: 38.89, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0019, acc: 42.11, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0020, acc: 45.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0021, acc: 47.62, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0022, acc: 50.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0023, acc: 52.17, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0024, acc: 54.17, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0025, acc: 56.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0026, acc: 57.69, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0027, acc: 59.26, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0028, acc: 60.71, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0029, acc: 62.07, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0030, acc: 63.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0031, acc: 64.52, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0032, acc: 65.62, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-03-03 12:04:56.893832
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0004, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick
+id: 0005, acc: 20.00, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0006, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0007, acc: 28.57, label: 1 ApplyEyeMakeup, predict: 4 BabyCrawling
+id: 0008, acc: 25.00, label: 1 ApplyEyeMakeup, predict: 58 PizzaTossing
+id: 0009, acc: 33.33, label: 1 ApplyEyeMakeup, predict: 1 ApplyEyeMakeup
+id: 0010, acc: 30.00, label: 1 ApplyEyeMakeup, predict: 78 ShavingBeard
+Namespace(attack_bn='clean', attack_iter=5, attack_type='noise', batch_size=12, checkpoint=1, dampening=0.0, detector_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth', epsilon=4, exp_name='test', framing_width=5, ft_begin_index=0, inf_bn='clean', input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', learning_rate=0.001, lr_patience=10, manual_seed=1, mode='score', model_depth=101, model_name='resnext_3bn', momentum=0.9, n_classes=101, n_epochs=7, n_finetune_classes=3, n_threads=4, nesterov=False, no_cuda=False, num_pixel=100, optimizer='sgd', pretrain_path='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', weight_decay=1e-05, wide_resnet_k=2)
+
+-test data: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/multi_clean_pgd_roa3/save_5.pth
+-detector: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/detect_train/resnet50/save_4.pth
+
+2020-03-03 12:06:33.570526
+
+id: 0001, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0002, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 14 BlowingCandles
+id: 0003, acc: 0.00, label: 1 ApplyEyeMakeup, predict: 2 ApplyLipstick

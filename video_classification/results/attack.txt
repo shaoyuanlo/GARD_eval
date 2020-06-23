@@ -1,0 +1,100 @@
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 13:59:03.402134
+
+id: 0001, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0002, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0003, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0004, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0005, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0006, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0007, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0008, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0009, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0010, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0011, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0012, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0013, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0014, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0015, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0016, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0017, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0018, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0019, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0020, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0021, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 13:59:33.191165
+
+id: 0001, acc: 0.00, label: ApplyEyeMakeup, predict: HandstandPushups
+id: 0002, acc: 0.00, label: ApplyEyeMakeup, predict: MilitaryParade
+id: 0003, acc: 0.00, label: ApplyEyeMakeup, predict: ApplyLipstick
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:21:08.297113
+
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:23:46.895761
+
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:25:22.616996
+
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:28:46.025008
+
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:29:18.068821
+
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:29:58.784031
+
+id: 0001, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0002, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0003, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0004, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:30:43.086483
+
+id: 0001, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0002, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0003, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:32:15.765954
+
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:32:52.500348
+
+id: 0001, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0002, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0003, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0004, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0005, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0006, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+id: 0007, acc: 100.00, label: ApplyEyeMakeup, predict: ApplyEyeMakeup
+-input: ./ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/save_10.pth
+
+2020-02-17 14:34:03.088780
+
+id: 0001, acc: 0.00, label: ApplyEyeMakeup, predict: MilitaryParade
+id: 0002, acc: 0.00, label: ApplyEyeMakeup, predict: MilitaryParade

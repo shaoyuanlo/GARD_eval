@@ -1,0 +1,7 @@
+Namespace(arch='resnext-101', attack_iter=5, attack_type='clean', batch_size=32, epsilon=255, exp_name='clean_mix3_roa', framing_width=5, input='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt', mean=[114.7748, 107.7354, 99.475], mode='score', model='/home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/mix_clean_pgd_roa3/save_3.pth', model_depth=101, model_name='resnext', n_classes=101, n_threads=4, no_cuda=False, num_pixel=100, output='output.json', resnet_shortcut='B', resnext_cardinality=32, roa_size=30, roa_stride=1, sample_duration=40, sample_size=112, save_image=False, sparsity=40, step_size=1.0, verbose=False, video_root='/home/sylo/SegNet/flowattack/UCF-101_jpg', wide_resnet_k=2)
+
+-input: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/video_classification/ucfTrainTestlist/testlist01_jpg.txt
+-model: /home/sylo/SegNet/flowattack/3D-ResNets-PyTorch/my_train/mix_clean_pgd_roa3/save_3.pth
+
+2020-02-25 13:57:25.268644
+

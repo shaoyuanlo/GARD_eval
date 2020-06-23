@@ -1,0 +1,178 @@
+ROA
+
+ROA
+
+ROA
+
+id: 1523, acc: 100.00
+Detect, id: 1523, acc: 0.00, predict: 1
+ROA
+
+id: 1523, acc: 100.00
+Detect, id: 1523, acc: 0.00, predict: 1
+ROA
+
+id: 1524, acc: 100.00
+Detect, id: 1524, acc: 0.00, predict: 0
+id: 1525, acc: 100.00
+Detect, id: 1525, acc: 0.00, predict: 0
+id: 1526, acc: 100.00
+Detect, id: 1526, acc: 0.00, predict: 0
+id: 1527, acc: 100.00
+Detect, id: 1527, acc: 0.00, predict: 0
+id: 1528, acc: 100.00
+Detect, id: 1528, acc: 0.00, predict: 0
+id: 1529, acc: 100.00
+Detect, id: 1529, acc: 0.00, predict: 0
+id: 1530, acc: 100.00
+Detect, id: 1530, acc: 0.00, predict: 0
+id: 1531, acc: 100.00
+Detect, id: 1531, acc: 0.00, predict: 0
+id: 1532, acc: 100.00
+Detect, id: 1532, acc: 0.00, predict: 0
+id: 1533, acc: 90.00
+Detect, id: 1533, acc: 0.00, predict: 0
+id: 1534, acc: 90.91
+Detect, id: 1534, acc: 0.00, predict: 0
+id: 1535, acc: 91.67
+Detect, id: 1535, acc: 0.00, predict: 1
+id: 1536, acc: 92.31
+Detect, id: 1536, acc: 0.00, predict: 1
+id: 1537, acc: 92.86
+Detect, id: 1537, acc: 0.00, predict: 0
+id: 1538, acc: 93.33
+Detect, id: 1538, acc: 0.00, predict: 0
+id: 1539, acc: 93.75
+Detect, id: 1539, acc: 0.00, predict: 0
+id: 1540, acc: 94.12
+Detect, id: 1540, acc: 0.00, predict: 0
+id: 1541, acc: 88.89
+Detect, id: 1541, acc: 0.00, predict: 0
+id: 1542, acc: 89.47
+Detect, id: 1542, acc: 0.00, predict: 0
+id: 1543, acc: 90.00
+Detect, id: 1543, acc: 0.00, predict: 0
+id: 1544, acc: 85.71
+Detect, id: 1544, acc: 0.00, predict: 0
+id: 1545, acc: 86.36
+Detect, id: 1545, acc: 0.00, predict: 0
+id: 1546, acc: 82.61
+Detect, id: 1546, acc: 0.00, predict: 0
+id: 1547, acc: 83.33
+Detect, id: 1547, acc: 0.00, predict: 0
+id: 1548, acc: 84.00
+Detect, id: 1548, acc: 0.00, predict: 0
+id: 1549, acc: 84.62
+Detect, id: 1549, acc: 0.00, predict: 0
+id: 1550, acc: 85.19
+Detect, id: 1550, acc: 0.00, predict: 0
+id: 1551, acc: 82.14
+Detect, id: 1551, acc: 0.00, predict: 1
+id: 1552, acc: 79.31
+Detect, id: 1552, acc: 0.00, predict: 1
+id: 1553, acc: 80.00
+Detect, id: 1553, acc: 0.00, predict: 0
+id: 1554, acc: 80.65
+Detect, id: 1554, acc: 0.00, predict: 1
+id: 1555, acc: 81.25
+Detect, id: 1555, acc: 0.00, predict: 0
+id: 1556, acc: 78.79
+Detect, id: 1556, acc: 0.00, predict: 0
+id: 1557, acc: 79.41
+Detect, id: 1557, acc: 0.00, predict: 0
+id: 1558, acc: 77.14
+Detect, id: 1558, acc: 0.00, predict: 1
+id: 1559, acc: 77.78
+Detect, id: 1559, acc: 0.00, predict: 0
+id: 1560, acc: 78.38
+Detect, id: 1560, acc: 0.00, predict: 1
+id: 1561, acc: 76.32
+Detect, id: 1561, acc: 0.00, predict: 0
+id: 1562, acc: 74.36
+Detect, id: 1562, acc: 0.00, predict: 0
+id: 1563, acc: 72.50
+Detect, id: 1563, acc: 0.00, predict: 0
+id: 1564, acc: 70.73
+Detect, id: 1564, acc: 0.00, predict: 0
+id: 1565, acc: 71.43
+Detect, id: 1565, acc: 0.00, predict: 1
+id: 1566, acc: 72.09
+Detect, id: 1566, acc: 0.00, predict: 1
+id: 1567, acc: 72.73
+Detect, id: 1567, acc: 0.00, predict: 1
+id: 1568, acc: 73.33
+Detect, id: 1568, acc: 0.00, predict: 1
+id: 1569, acc: 73.91
+Detect, id: 1569, acc: 0.00, predict: 0
+id: 1570, acc: 74.47
+Detect, id: 1570, acc: 0.00, predict: 1
+id: 1571, acc: 75.00
+Detect, id: 1571, acc: 0.00, predict: 0
+id: 1572, acc: 75.51
+Detect, id: 1572, acc: 0.00, predict: 1
+id: 1573, acc: 76.00
+Detect, id: 1573, acc: 0.00, predict: 0
+id: 1574, acc: 76.47
+Detect, id: 1574, acc: 0.00, predict: 0
+id: 1575, acc: 75.00
+Detect, id: 1575, acc: 0.00, predict: 1
+id: 1576, acc: 75.47
+Detect, id: 1576, acc: 0.00, predict: 1
+id: 1577, acc: 75.93
+Detect, id: 1577, acc: 0.00, predict: 1
+id: 1578, acc: 76.36
+Detect, id: 1578, acc: 0.00, predict: 0
+id: 1579, acc: 76.79
+Detect, id: 1579, acc: 0.00, predict: 1
+id: 1580, acc: 77.19
+Detect, id: 1580, acc: 0.00, predict: 1
+id: 1581, acc: 77.59
+Detect, id: 1581, acc: 0.00, predict: 1
+id: 1582, acc: 77.97
+Detect, id: 1582, acc: 0.00, predict: 1
+id: 1583, acc: 78.33
+Detect, id: 1583, acc: 0.00, predict: 1
+id: 1584, acc: 78.69
+Detect, id: 1584, acc: 0.00, predict: 0
+id: 1585, acc: 79.03
+Detect, id: 1585, acc: 0.00, predict: 0
+id: 1586, acc: 77.78
+Detect, id: 1586, acc: 0.00, predict: 1
+id: 1587, acc: 78.12
+Detect, id: 1587, acc: 0.00, predict: 1
+id: 1588, acc: 76.92
+Detect, id: 1588, acc: 0.00, predict: 1
+id: 1589, acc: 75.76
+Detect, id: 1589, acc: 0.00, predict: 1
+id: 1590, acc: 74.63
+Detect, id: 1590, acc: 0.00, predict: 1
+id: 1591, acc: 75.00
+Detect, id: 1591, acc: 0.00, predict: 1
+id: 1592, acc: 75.36
+Detect, id: 1592, acc: 0.00, predict: 1
+id: 1593, acc: 75.71
+Detect, id: 1593, acc: 0.00, predict: 1
+id: 1594, acc: 76.06
+Detect, id: 1594, acc: 0.00, predict: 1
+id: 1595, acc: 76.39
+Detect, id: 1595, acc: 0.00, predict: 1
+id: 1596, acc: 76.71
+Detect, id: 1596, acc: 0.00, predict: 1
+id: 1597, acc: 77.03
+Detect, id: 1597, acc: 0.00, predict: 1
+id: 1598, acc: 77.33
+Detect, id: 1598, acc: 0.00, predict: 1
+id: 1599, acc: 77.63
+Detect, id: 1599, acc: 0.00, predict: 0
+id: 1600, acc: 77.92
+Detect, id: 1600, acc: 0.00, predict: 0
+id: 1601, acc: 76.92
+Detect, id: 1601, acc: 0.00, predict: 0
+id: 1602, acc: 77.22
+Detect, id: 1602, acc: 0.00, predict: 0
+ROA
+
+id: 1524, acc: 100.00
+Detect, id: 1524, acc: 0.00, predict: 0
+id: 1525, acc: 100.00
+Detect, id: 1525, acc: 0.00, predict: 0
