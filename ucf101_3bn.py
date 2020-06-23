@@ -14,7 +14,7 @@ from utils import *
 
 from typing import Any, Dict, List, Optional, Tuple, Union, TYPE_CHECKING
 from armory.data.utils import maybe_download_weights_from_s3
-from art.classifiers import PyTorchClassifier
+from art.estimators.classification.pytorch import PyTorchClassifier
 
 def detector_and_model(detector, model, inputs, spatial_transform):
 
