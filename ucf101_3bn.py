@@ -1,20 +1,3 @@
-import os
-import sys
-import json
-import subprocess
-import numpy as np
-import torch
-from torch import nn
-import torchvision
-from torch.autograd import Variable
-
-from spatial_transforms import Compose, Scale, CenterCrop
-from model import generate_model
-from utils import *
-
-from typing import Any, Dict, List, Optional, Tuple, Union, TYPE_CHECKING
-from armory.data.utils import maybe_download_weights_from_s3
-
 """
 This module implements the classifier `PyTorchClassifier` for PyTorch models.
 """
@@ -684,6 +667,24 @@ class PyTorchClassifier(ClassGradientsMixin, ClassifierMixin, PyTorchEstimator):
 
         except ImportError:
             raise ImportError("Could not find PyTorch (`torch`) installation.")
+
+
+import os
+import sys
+import json
+import subprocess
+import numpy as np
+import torch
+from torch import nn
+import torchvision
+from torch.autograd import Variable
+
+from spatial_transforms import Compose, Scale, CenterCrop
+from model import generate_model
+from utils import *
+
+from typing import Any, Dict, List, Optional, Tuple, Union, TYPE_CHECKING
+from armory.data.utils import maybe_download_weights_from_s3
 
 
 def detector_and_model(detector, model, inputs, spatial_transform):
