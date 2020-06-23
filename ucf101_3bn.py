@@ -13,6 +13,7 @@ from model import generate_model
 from utils import *
 
 from typing import Any, Dict, List, Optional, Tuple, Union, TYPE_CHECKING
+from armory.data.utils import maybe_download_weights_from_s3
 
 
 def detector_and_model(detector, model, inputs, spatial_transform):
@@ -240,12 +241,14 @@ class MyPytorchClassifier():
 	
 def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
 
-    detector_path = 'model_weight/save_4.pth'
+    if weights_file:
+        detector_path = maybe_download_weights_from_s3('save_4.pth')
+        pretrain_path = maybe_download_weights_from_s3('save_5.pth')
+
     detector = generate_model('resnet')
     detector_data = torch.load(detector_path)
     detector.load_state_dict(detector_data['state_dict'])
 
-    pretrain_path = 'model_weight/save_5.pth'
     model = generate_model('resnext_3bn')	
     model_data = torch.load(pretrain_path)
     model.load_state_dict(model_data['state_dict'])
