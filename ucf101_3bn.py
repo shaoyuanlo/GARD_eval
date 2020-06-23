@@ -18,7 +18,7 @@ from armory.data.utils import maybe_download_weights_from_s3
 
 def detector_and_model(detector, model, inputs, spatial_transform):
 
-    temp_root = '/home/sylo/SegNet/armory_mine/video_classification/image.jpg'
+    temp_root = 'image.jpg'
     frame_num = len(inputs[0,0,:,0,0])
     batch_num = len(inputs[:,0,0,0,0])	
     for bb in range(batch_num):	
