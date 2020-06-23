@@ -75,7 +75,13 @@ class WideBottleneck(nn.Module):
             slice = torch.split(out, 4, dim=0)		
             slice_clean = self.bn1(slice[0])		
             slice_roa = self.bn1_c(slice[1])
-            out = torch.cat((slice_clean,slice_roa), dim=0)			
+            out = torch.cat((slice_clean,slice_roa), dim=0)
+        elif type==33:        
+            slice = torch.split(out, 1, dim=0)		
+            slice_clean = self.bn1(slice[0])		
+            slice_pgd = self.bn1_b(slice[1])		
+            slice_roa = self.bn1_c(slice[2])
+            out = torch.cat((slice_clean,slice_pgd,slice_roa), dim=0)			
         else:        
             slice = torch.split(out, 4, dim=0)		
             slice_clean = self.bn1(slice[0])		
@@ -102,7 +108,13 @@ class WideBottleneck(nn.Module):
             slice = torch.split(out, 4, dim=0)		
             slice_clean = self.bn2(slice[0])		
             slice_roa = self.bn2_c(slice[1])
-            out = torch.cat((slice_clean,slice_roa), dim=0)			
+            out = torch.cat((slice_clean,slice_roa), dim=0)
+        elif type==33:          
+            slice = torch.split(out, 1, dim=0)		
+            slice_clean = self.bn2(slice[0])		
+            slice_pgd = self.bn2_b(slice[1])		
+            slice_roa = self.bn2_c(slice[2])
+            out = torch.cat((slice_clean,slice_pgd,slice_roa), dim=0)			
         else:          
             slice = torch.split(out, 4, dim=0)		
             slice_clean = self.bn2(slice[0])		
@@ -129,7 +141,13 @@ class WideBottleneck(nn.Module):
             slice = torch.split(out, 4, dim=0)		
             slice_clean = self.bn3(slice[0])		
             slice_roa = self.bn3_c(slice[1])
-            out = torch.cat((slice_clean,slice_roa), dim=0)			
+            out = torch.cat((slice_clean,slice_roa), dim=0)
+        elif type==33:          
+            slice = torch.split(out, 1, dim=0)		
+            slice_clean = self.bn3(slice[0])		
+            slice_pgd = self.bn3_b(slice[1])		
+            slice_roa = self.bn3_c(slice[2])
+            out = torch.cat((slice_clean,slice_pgd,slice_roa), dim=0)			
         else:          
             slice = torch.split(out, 4, dim=0)		
             slice_clean = self.bn3(slice[0])		
@@ -233,7 +251,14 @@ class WideResNet(nn.Module):
             slice = torch.split(x, 4, dim=0)		
             slice_clean = self.bn1(slice[0])		
             slice_roa = self.bn1_c(slice[1])
-            x = torch.cat((slice_clean,slice_roa), dim=0)			
+            x = torch.cat((slice_clean,slice_roa), dim=0)
+        elif type==33:
+            #print(x.shape)		
+            slice = torch.split(x, 1, dim=0)		
+            slice_clean = self.bn1(slice[0])		
+            slice_pgd = self.bn1_b(slice[1])		
+            slice_roa = self.bn1_c(slice[2])
+            x = torch.cat((slice_clean,slice_pgd,slice_roa), dim=0)			
         else:            
             slice = torch.split(x, 4, dim=0)		
             slice_clean = self.bn1(slice[0])		

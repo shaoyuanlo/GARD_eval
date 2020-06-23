@@ -74,16 +74,12 @@ class ResNeXtBottleneck(nn.Module):
             out = self.bn1_b(out)
         elif type==2:
             out = self.bn1_c(out)
-        elif type==11:
-            slice = torch.split(out, 4, dim=0)		
+        elif type==33:        
+            slice = torch.split(out, 1, dim=0)		
             slice_clean = self.bn1(slice[0])		
-            slice_pgd= self.bn1_b(slice[1])		
-            out = torch.cat((slice_clean,slice_pgd), dim=0)
-        elif type==22:
-            slice = torch.split(out, 4, dim=0)		
-            slice_clean = self.bn1(slice[0])		
-            slice_roa = self.bn1_c(slice[1])
-            out = torch.cat((slice_clean,slice_roa), dim=0)			
+            slice_pgd = self.bn1_b(slice[1])		
+            slice_roa = self.bn1_c(slice[2])
+            out = torch.cat((slice_clean,slice_pgd,slice_roa), dim=0)			
         else:        
             slice = torch.split(out, 4, dim=0)		
             slice_clean = self.bn1(slice[0])		
@@ -101,16 +97,12 @@ class ResNeXtBottleneck(nn.Module):
             out = self.bn2_b(out)
         elif type==2:
             out = self.bn2_c(out)
-        elif type==11:
-            slice = torch.split(out, 4, dim=0)		
+        elif type==33:          
+            slice = torch.split(out, 1, dim=0)		
             slice_clean = self.bn2(slice[0])		
-            slice_pgd= self.bn2_b(slice[1])		
-            out = torch.cat((slice_clean,slice_pgd), dim=0)
-        elif type==22:
-            slice = torch.split(out, 4, dim=0)		
-            slice_clean = self.bn2(slice[0])		
-            slice_roa = self.bn2_c(slice[1])
-            out = torch.cat((slice_clean,slice_roa), dim=0)			
+            slice_pgd = self.bn2_b(slice[1])		
+            slice_roa = self.bn2_c(slice[2])
+            out = torch.cat((slice_clean,slice_pgd,slice_roa), dim=0)			
         else:          
             slice = torch.split(out, 4, dim=0)		
             slice_clean = self.bn2(slice[0])		
@@ -128,16 +120,12 @@ class ResNeXtBottleneck(nn.Module):
             out = self.bn3_b(out)
         elif type==2:
             out = self.bn3_c(out)
-        elif type==11:
-            slice = torch.split(out, 4, dim=0)		
+        elif type==33:          
+            slice = torch.split(out, 1, dim=0)		
             slice_clean = self.bn3(slice[0])		
-            slice_pgd= self.bn3_b(slice[1])		
-            out = torch.cat((slice_clean,slice_pgd), dim=0)
-        elif type==22:
-            slice = torch.split(out, 4, dim=0)		
-            slice_clean = self.bn3(slice[0])		
-            slice_roa = self.bn3_c(slice[1])
-            out = torch.cat((slice_clean,slice_roa), dim=0)			
+            slice_pgd = self.bn3_b(slice[1])		
+            slice_roa = self.bn3_c(slice[2])
+            out = torch.cat((slice_clean,slice_pgd,slice_roa), dim=0) 			
         else:          
             slice = torch.split(out, 4, dim=0)		
             slice_clean = self.bn3(slice[0])		
@@ -232,7 +220,9 @@ class ResNeXt(nn.Module):
         return MultiPrmSequential(*layers)
 
     def forward(self, x, type):
+        #print(x.shape)	
         x = self.conv1(x)
+        #print(x.shape)		
 
         if type==0:
             x = self.bn1(x)
@@ -240,16 +230,13 @@ class ResNeXt(nn.Module):
             x = self.bn1_b(x)
         elif type==2:
             x = self.bn1_c(x)
-        elif type==11:
-            slice = torch.split(x, 4, dim=0)		
+        elif type==33:
+            #print(x.shape)		
+            slice = torch.split(x, 1, dim=0)		
             slice_clean = self.bn1(slice[0])		
-            slice_pgd= self.bn1_b(slice[1])		
-            x = torch.cat((slice_clean,slice_pgd), dim=0)
-        elif type==22:
-            slice = torch.split(x, 4, dim=0)		
-            slice_clean = self.bn1(slice[0])		
-            slice_roa = self.bn1_c(slice[1])
-            x = torch.cat((slice_clean,slice_roa), dim=0)			
+            slice_pgd = self.bn1_b(slice[1])		
+            slice_roa = self.bn1_c(slice[2])
+            x = torch.cat((slice_clean,slice_pgd,slice_roa), dim=0)			
         else:            
             slice = torch.split(x, 4, dim=0)		
             slice_clean = self.bn1(slice[0])		
