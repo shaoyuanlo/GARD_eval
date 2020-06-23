@@ -9,14 +9,15 @@ import torchvision
 from torch.autograd import Variable
 
 from spatial_transforms import Compose, Scale, CenterCrop
-from opts_detect import parse_opts
 from model import generate_model
 from utils import *
+
+from typing import Any, Dict, List, Optional, Tuple, Union, TYPE_CHECKING
 
 
 def detector_and_model(detector, model, inputs, spatial_transform):
 
-    temp_root = '/home/sylo/SegNet/3D-ResNets-PyTorch/video_classification/image.jpg'
+    temp_root = '/home/sylo/SegNet/armory_mine/video_classification/image.jpg'
     frame_num = len(inputs[0,0,:,0,0])
     batch_num = len(inputs[:,0,0,0,0])	
     for bb in range(batch_num):	
@@ -37,7 +38,7 @@ def detector_and_model(detector, model, inputs, spatial_transform):
     return outputs
 
 
-class MyPytorchClassifier(PytorchClassifier):
+class MyPytorchClassifier():
 
     def __init__(self, detector, model, spatial_transform):		
         super(MyPytorchClassifier, self).__init__()
@@ -239,26 +240,20 @@ class MyPytorchClassifier(PytorchClassifier):
 	
 def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
 
-    opt = parse_opts()
-    opt.n_classes = 3  # for test
-	
-    detector = generate_model(opt)
-    detector_data = torch.load(opt.detector_path)
+    detector_path = 'detect_train/resnet50/save_4.pth'
+    detector = generate_model('resnet')
+    detector_data = torch.load(detector_path)
     detector.load_state_dict(detector_data['state_dict'])
 
-    opt.model_name = 'resnext_3bn'
-    opt.model_depth = 101
-    opt.resnet_shortcut = 'B'
-    opt.n_classes = 101
-	
-    model = generate_model(opt)	
-    model_data = torch.load(opt.pretrain_path)
+    pretrain_path = '/home/sylo/SegNet/armory_mine/my_train/multi_clean_pgd_roa3/save_5.pth'
+    model = generate_model('resnext_3bn')	
+    model_data = torch.load(pretrain_path)
     model.load_state_dict(model_data['state_dict'])
 
     spatial_transform = Compose([Scale(opt.sample_size), CenterCrop(opt.sample_size), torchvision.transforms.ToTensor()])
 
-	wrapped_model = MyPytorchClassifier(detector, model, spatial_transform)
+    wrapped_model = MyPytorchClassifier(detector, model, spatial_transform)
 	
-	return wrapped_model
+    return wrapped_model
 
 	
