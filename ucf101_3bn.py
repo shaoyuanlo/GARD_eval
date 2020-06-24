@@ -255,7 +255,7 @@ def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
 
     spatial_transform = Compose([Scale(112), CenterCrop(40), torchvision.transforms.ToTensor()])
 
-    wrapped_model = MyPytorchClassifier(detector, model, spatial_transform)
+    wrapped_model = MyPytorchClassifier(detector=detector, model=model, spatial_transform=spatial_transform)
 	
     return wrapped_model
 
