@@ -91,7 +91,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         self.my_detector.to(self._device)
         self.my_model.to(self._device)
 
-    def predict(self, x: np.ndarray, batch_size: int=8, **kwargs) -> np.ndarray:
+    def predict(self, x: np.ndarray, batch_size: int = 128, **kwargs) -> np.ndarray:
         """
         Perform prediction for a batch of inputs.
         :param x: Test set.
@@ -103,7 +103,7 @@ class MyPytorchClassifier(PyTorchClassifier):
 
         # Apply preprocessing
         x_preprocessed = x
-        x_preprocessed, _ = self._apply_preprocessing(x, y=None, fit=False)
+        #x_preprocessed, _ = self._apply_preprocessing(x, y=None, fit=False)
         print(x.shape)
         print(x_preprocessed.shape)		
 
