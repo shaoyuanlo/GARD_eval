@@ -39,7 +39,7 @@ def detector_and_model(detector, model, inputs, spatial_transform):
     return outputs
 
 
-class MyPytorchClassifier(PytorchClassifier):
+class MyPytorchClassifier(PyTorchClassifier):
 
     def __init__(self, detector, model, spatial_transform):		
         super(MyPytorchClassifier, self).__init__()
