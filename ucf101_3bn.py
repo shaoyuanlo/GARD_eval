@@ -15,6 +15,9 @@ from utils import *
 from typing import Any, Dict, List, Optional, Tuple, Union, TYPE_CHECKING
 from armory.data.utils import maybe_download_weights_from_s3
 from art.classifiers import PyTorchClassifier
+from art.config import ART_DATA_PATH, CLIP_VALUES_TYPE, PREPROCESSING_TYPE
+from art.utils import Deprecated
+
 
 def detector_and_model(detector, model, inputs, spatial_transform):
 
@@ -41,10 +44,43 @@ def detector_and_model(detector, model, inputs, spatial_transform):
 
 class MyPytorchClassifier(PyTorchClassifier):
 
-    def __init__(self, my_detector, my_model, spatial_transform):		
-        super(MyPytorchClassifier, self).__init__(model, loss, input_shape,
-            nb_classes, optimizer, channel_index, channels_first, clip_values,
-            preprocessing_defences, postprocessing_defences, preprocessing, device_type)
+    def __init__(self, my_detector, my_model, spatial_transform,
+        model: "torch.nn.Module",
+        loss: "torch.nn.modules.loss._Loss",
+        input_shape: Tuple[int, ...],
+        nb_classes: int,
+        optimizer: Optional["torch.optim.Optimizer"] = None,  # type: ignore
+        channel_index=Deprecated,
+        channels_first: bool = True,
+        clip_values: Optional[CLIP_VALUES_TYPE] = None,
+        preprocessing_defences: Union["Preprocessor", List["Preprocessor"], None] = None,
+        postprocessing_defences: Union["Postprocessor", List["Postprocessor"], None] = None,
+        preprocessing: PREPROCESSING_TYPE = (0, 1),
+        device_type: str = "gpu",
+    ):
+
+        # Remove in 1.5.0
+        if channel_index == 3:
+            channels_first = False
+        elif channel_index == 1:
+            channels_first = True
+        elif channel_index is not Deprecated:
+            raise ValueError("Not a proper channel_index. Use channels_first.")
+	
+        super(MyPytorchClassifier, self).__init__(
+            model=model,
+            loss=loss,
+            input_shape=input_shape,
+            nb_classes=nb_classes,
+            optimizer=optimizer,
+            channel_index=channel_index,
+            channels_first=channels_first,
+            clip_values=clip_values,
+            preprocessing_defences=preprocessing_defences,
+            postprocessing_defences=postprocessing_defences,
+            preprocessing=preprocessing,
+            device_type=device_type,
+        )
 
         self.detector = my_detector
         self.model = my_model
