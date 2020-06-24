@@ -82,8 +82,8 @@ class MyPytorchClassifier(PyTorchClassifier):
             device_type=device_type,
         )
 
-        self.detector = my_detector
-        self.model = my_model
+        self.my_detector = my_detector
+        self.my_model = my_model
         self.spatial_transform = spatial_transform
 		
         self.nb_classes = nb_classes
@@ -91,8 +91,8 @@ class MyPytorchClassifier(PyTorchClassifier):
 		
         cuda_idx = torch.cuda.current_device()
         self._device = torch.device("cuda:{}".format(cuda_idx))
-        self.detector.to(self._device)
-        self.model.to(self._device)
+        self.my_detector.to(self._device)
+        self.my_model.to(self._device)
 
     def predict(self, x: np.ndarray, batch_size: int=8, **kwargs) -> np.ndarray:
         """
@@ -101,8 +101,8 @@ class MyPytorchClassifier(PyTorchClassifier):
         :param batch_size: Size of batches.
         :return: Array of predictions of shape `(nb_inputs, nb_classes)`.
         """
-        self.detector.eval()
-        self.model.eval()		
+        self.my_detector.eval()
+        self.my_model.eval()		
 
         # Apply preprocessing
         x_preprocessed = x
@@ -117,7 +117,7 @@ class MyPytorchClassifier(PyTorchClassifier):
             my_inputs = torch.from_numpy(x_preprocessed[begin:end]).to(self._device)
 
             with torch.no_grad():
-                model_outputs = detector_and_model(self.detector, self.model, my_inputs, self.spatial_transform)
+                model_outputs = detector_and_model(self.my_detector, self.my_model, my_inputs, self.spatial_transform)
 
             output = model_outputs[-1]
             results[begin:end] = output.detach().cpu().numpy()
@@ -159,7 +159,7 @@ class MyPytorchClassifier(PyTorchClassifier):
             x_preprocessed.requires_grad = True
 
         # Run prediction
-        model_outputs = detector_and_model(self.detector, self.model, x_preprocessed, self.spatial_transform)
+        model_outputs = detector_and_model(self.my_detector, self.my_model, x_preprocessed, self.spatial_transform)
 
         # Set where to get gradient
         if self._layer_idx_gradients >= 0:
@@ -182,7 +182,7 @@ class MyPytorchClassifier(PyTorchClassifier):
 
         input_grad.register_hook(save_grad())
 
-        self.model.zero_grad()
+        self.my_model.zero_grad()
         if label is None:
             for i in range(self.nb_classes):
                 torch.autograd.backward(
@@ -234,11 +234,11 @@ class MyPytorchClassifier(PyTorchClassifier):
         labels_t = torch.from_numpy(y_preprocessed).to(self._device)
 
         # Compute the gradient and return
-        model_outputs = detector_and_model(self.detector, self.model, inputs_t, self.spatial_transform)
+        model_outputs = detector_and_model(self.my_detector, self.my_model, inputs_t, self.spatial_transform)
         loss = self._loss(model_outputs[-1], labels_t)
 
         # Clean gradients
-        self.model.zero_grad()
+        self.my_model.zero_grad()
 
         # Compute gradients
         loss.backward()
@@ -264,11 +264,11 @@ class MyPytorchClassifier(PyTorchClassifier):
         x = Variable(x, requires_grad=True)
 
         # Compute the gradient and return
-        model_outputs = detector_and_model(self.detector, self.model, x, self.spatial_transform)
+        model_outputs = detector_and_model(self.my_detector, self.my_model, x, self.spatial_transform)
         loss = self._loss(model_outputs[-1], y)
 
         # Clean gradients
-        self.model.zero_grad()
+        self.my_model.zero_grad()
 
         # Compute gradients
         loss.backward()
