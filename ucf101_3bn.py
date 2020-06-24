@@ -41,11 +41,11 @@ def detector_and_model(detector, model, inputs, spatial_transform):
 
 class MyPytorchClassifier(PyTorchClassifier):
 
-    def __init__(self, detector, model, spatial_transform):		
+    def __init__(self, detector, mmodel, spatial_transform):		
         super(MyPytorchClassifier, self).__init__()
 
         self.detector = detector
-        self.model = model
+        self.model = mmodel
         self.spatial_transform = spatial_transform
 		
         self.nb_classes = 101
@@ -252,11 +252,10 @@ def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
     model = generate_model('resnext_3bn')	
     model_data = torch.load(pretrain_path)
     model.load_state_dict(model_data['state_dict'])
-    print(model)
 
     spatial_transform = Compose([Scale(112), CenterCrop(40), torchvision.transforms.ToTensor()])
 
-    wrapped_model = MyPytorchClassifier(detector=detector, model=model, spatial_transform=spatial_transform)
+    wrapped_model = MyPytorchClassifier(detector, model, spatial_transform)
 	
     return wrapped_model
 
