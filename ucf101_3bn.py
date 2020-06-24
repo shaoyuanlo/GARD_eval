@@ -252,6 +252,7 @@ def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
     model = generate_model('resnext_3bn')	
     model_data = torch.load(pretrain_path)
     model.load_state_dict(model_data['state_dict'])
+    print(model)
 
     spatial_transform = Compose([Scale(112), CenterCrop(40), torchvision.transforms.ToTensor()])
 
