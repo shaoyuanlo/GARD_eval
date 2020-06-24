@@ -86,8 +86,8 @@ class MyPytorchClassifier(PyTorchClassifier):
         self.my_model = my_model
         self.spatial_transform = spatial_transform
 		
-        self.nb_classes = nb_classes
-        self._loss = loss
+        self.nb_classes = 101
+        self._loss = nn.CrossEntropyLoss()
 		
         cuda_idx = torch.cuda.current_device()
         self._device = torch.device("cuda:{}".format(cuda_idx))
