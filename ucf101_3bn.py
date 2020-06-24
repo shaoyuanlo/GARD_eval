@@ -83,7 +83,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         )
 
         self.detector = my_detector
-        self.model = my_model
+        self.model = model
         self.spatial_transform = spatial_transform
 		
         self.nb_classes = nb_classes
