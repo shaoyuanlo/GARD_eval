@@ -45,10 +45,10 @@ def detector_and_model(detector, model, inputs, spatial_transform):
 class MyPytorchClassifier(PyTorchClassifier):
 
     def __init__(self, my_detector, my_model, spatial_transform,
-        model: "torch.nn.Module",
-        loss: "torch.nn.modules.loss._Loss",
-        input_shape: Tuple[int, ...],
-        nb_classes: int,
+        model=None,
+        loss=nn.CrossEntropyLoss(),
+        input_shape=(3, 16, 112, 112),
+        nb_classes=101,
         optimizer: Optional["torch.optim.Optimizer"] = None,  # type: ignore
         channel_index=Deprecated,
         channels_first: bool = True,
@@ -86,8 +86,8 @@ class MyPytorchClassifier(PyTorchClassifier):
         self.model = my_model
         self.spatial_transform = spatial_transform
 		
-        self.nb_classes = 101
-        self._loss = nn.CrossEntropyLoss()		
+        self.nb_classes = nb_classes
+        self._loss = loss
 		
         cuda_idx = torch.cuda.current_device()
         self._device = torch.device("cuda:{}".format(cuda_idx))
