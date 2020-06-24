@@ -42,7 +42,9 @@ def detector_and_model(detector, model, inputs, spatial_transform):
 class MyPytorchClassifier(PyTorchClassifier):
 
     def __init__(self, my_detector, my_model, spatial_transform):		
-        super(MyPytorchClassifier, self).__init__()
+        super(MyPytorchClassifier, self).__init__(model, loss, input_shape,
+            nb_classes, optimizer, channel_index, channels_first, clip_values,
+            preprocessing_defences, postprocessing_defences, preprocessing, device_type)
 
         self.detector = my_detector
         self.model = my_model
