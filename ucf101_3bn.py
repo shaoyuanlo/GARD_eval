@@ -52,7 +52,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         optimizer: Optional["torch.optim.Optimizer"] = None,  # type: ignore
         channel_index=Deprecated,
         channels_first: bool = True,
-        clip_values=(np.transpose(np.zeros((40,112,112,3)), (3,0,1,2)), np.transpose(255.0*np.ones((40,112,112,3)), (3,0,1,2)),),
+        clip_values=(np.transpose(np.zeros((40,112,112,3)), (3,0,1,2))-np.array([114.7748, 107.7354, 99.4750]), np.transpose(255.0*np.ones((40,112,112,3))-np.array([114.7748, 107.7354, 99.4750]), (3,0,1,2)),),
         preprocessing_defences: Union["Preprocessor", List["Preprocessor"], None] = None,
         postprocessing_defences: Union["Postprocessor", List["Postprocessor"], None] = None,
         preprocessing: PREPROCESSING_TYPE = (0, 1),
