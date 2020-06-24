@@ -103,8 +103,6 @@ class MyPytorchClassifier(PyTorchClassifier):
 
         # Apply preprocessing
         x_preprocessed = x
-        #x_preprocessed, _ = self._apply_preprocessing(x, y=None, fit=False)
-        print(x.shape)
         print(x_preprocessed.shape)		
 
         # Run prediction with batch processing
