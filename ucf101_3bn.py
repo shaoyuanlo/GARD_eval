@@ -45,7 +45,7 @@ def detector_and_model(detector, model, inputs, spatial_transform):
 class MyPytorchClassifier(PyTorchClassifier):
 
     def __init__(self, my_detector, my_model, spatial_transform,
-        model,
+        model=nn.Conv2d(1, 3, 1, bias=False),
         loss=nn.CrossEntropyLoss(),
         input_shape=(3, 16, 112, 112),
         nb_classes=101,
@@ -83,7 +83,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         )
 
         self.detector = my_detector
-        self.model = model
+        self.model = my_model
         self.spatial_transform = spatial_transform
 		
         self.nb_classes = nb_classes
@@ -293,7 +293,7 @@ def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
 
     spatial_transform = Compose([Scale(112), CenterCrop(40), torchvision.transforms.ToTensor()])
 
-    wrapped_model = MyPytorchClassifier(my_detector, my_model, spatial_transform, model=my_model)
+    wrapped_model = MyPytorchClassifier(my_detector, my_model, spatial_transform)
 	
     return wrapped_model
 
