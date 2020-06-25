@@ -279,6 +279,39 @@ class MyPytorchClassifier(PyTorchClassifier):
         return grads  # type: ignore
 
 
+def my_preprocess_data(clip): 
+    """Preprocess list(frames) based on train/test and modality.
+    Training:
+        - Multiscale corner crop
+        - Random Horizonatal Flip (change direction of Flow accordingly)
+        - Convert a ``PIL.Image`` or ``numpy.ndarray`` to tensor
+        - Normalize R,G,B based on mean and std of ``ActivityNet``
+    Testing/ Validation:
+        - Scale frame
+        - Center crop
+        - Convert a ``PIL.Image`` or ``numpy.ndarray`` to tensor
+        - Normalize R,G,B based on mean and std of ``ActivityNet``
+    Args:
+        clip (list(frames)): list of RGB/Flow frames
+        train : 1 for train, 0 for test
+    Return:
+        Tensor(frames) of shape C x T x H x W
+    """
+    #opt.modality == 'RGB':
+    processed_clip = torch.Tensor(3, len(clip), 112, 112)
+   
+    for i, I in enumerate(clip):
+        I = Scale(112)(I)
+        I = CenterCrop(112)(I)
+        I = torchvision.transforms.ToTensor()(I)
+
+        #opt.modality == 'RGB':
+        #I = Normalize(get_mean('activitynet'), [1,1,1])(I)
+        processed_clip[:, i, :, :] = I
+                    
+    return(processed_clip)
+
+
 def preprocessing_fn(inputs):
     """
     Inputs is comprised of one or more videos, where each video
@@ -308,13 +341,11 @@ def preprocessing_fn(inputs):
             input_fixed = input
 
         # apply MARS preprocessing: scaling, cropping, normalizing
-        opt = parse_opts(arguments=[])
-        opt.modality = "RGB"
-        opt.sample_size = 112
+        # opt = parse_opts(arguments=[]), opt.modality = "RGB", opt.sample_size = 112
         input_Image = []  # convert each frame to PIL Image
         for f in input_fixed:
             input_Image.append(Image.fromarray(f))
-        input_mars_preprocessed = preprocess_data.scale_crop(input_Image, 0, opt)
+        input_mars_preprocessed = my_preprocess_data(input_Image)
 
         # reshape
         input_reshaped = []
