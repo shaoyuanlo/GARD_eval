@@ -7,6 +7,7 @@ import torch
 from torch import nn
 import torchvision
 from torch.autograd import Variable
+from PIL import Image
 
 from spatial_transforms import Compose, Scale, CenterCrop
 from model import generate_model
