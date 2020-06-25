@@ -342,7 +342,7 @@ def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
     model_data = torch.load(pretrain_path)
     my_model.load_state_dict(model_data['state_dict'])
 
-    spatial_transform = Compose([Scale(112), CenterCrop(40), torchvision.transforms.ToTensor()])
+    spatial_transform = Compose([Scale(112), CenterCrop(112), torchvision.transforms.ToTensor()])
 
     wrapped_model = MyPytorchClassifier(my_detector, my_model, spatial_transform)
 	
