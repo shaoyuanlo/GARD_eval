@@ -51,7 +51,7 @@ class MyPytorchClassifier(PyTorchClassifier):
     def __init__(self, my_detector, my_model, spatial_transform,
         model=nn.Conv2d(1, 3, 1, bias=False),
         loss=nn.CrossEntropyLoss(),
-        input_shape=(3, 16, 112, 112),
+        input_shape=(3, 40, 112, 112),
         nb_classes=101,
         optimizer: Optional["torch.optim.Optimizer"] = None,  # type: ignore
         channel_index=Deprecated,
@@ -288,7 +288,7 @@ def preprocessing_fn(inputs):
     each video to (n_stack, 3, 16, height, width), where n_stack = int(time/16).
     Outputs is a list of videos, each of shape (n_stack, 3, 16, 112, 112)
     """
-    sample_duration = 16  # expected number of consecutive frames as input to the model
+    sample_duration = 40  # expected number of consecutive frames as input to the model
     outputs = []
     if inputs.dtype == np.uint8:  # inputs is a single video, i.e., batch size == 1
         inputs = [inputs]
