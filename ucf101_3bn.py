@@ -324,6 +324,10 @@ def preprocessing_fn(inputs):
             ].numpy()
             input_reshaped.append(np_frames)
         outputs.append(np.array(input_reshaped, dtype=np.float32))
+		
+    print(inputs.shape)
+    print(outputs.shape)	
+		
     return outputs
 	
 	
