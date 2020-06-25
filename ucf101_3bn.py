@@ -47,7 +47,7 @@ class MyPytorchClassifier(PyTorchClassifier):
     def __init__(self, my_detector, my_model, spatial_transform,
         model=nn.Conv2d(1, 3, 1, bias=False),
         loss=nn.CrossEntropyLoss(),
-        input_shape=(3, 40, 112, 112),
+        input_shape=(3, 16, 112, 112),
         nb_classes=101,
         optimizer: Optional["torch.optim.Optimizer"] = None,  # type: ignore
         channel_index=Deprecated,
