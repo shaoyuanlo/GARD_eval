@@ -106,8 +106,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         self.my_model.eval()		
 
         # Apply preprocessing
-        x_preprocessed = x
-        print(x_preprocessed.shape)		
+        x_preprocessed = x		
 
         # Run prediction with batch processing
         results = np.zeros((x_preprocessed.shape[0], self.nb_classes), dtype=np.float32)
