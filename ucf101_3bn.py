@@ -18,6 +18,9 @@ from art.classifiers import PyTorchClassifier
 from art.config import ART_DATA_PATH, CLIP_VALUES_TYPE, PREPROCESSING_TYPE
 from art.utils import Deprecated
 
+from MARS.opts import parse_opts
+from MARS.dataset import preprocess_data
+
 
 def detector_and_model(detector, model, inputs, spatial_transform):
 
