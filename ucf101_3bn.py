@@ -351,10 +351,7 @@ def preprocessing_fn(inputs):
                 :, ns * sample_duration : (ns + 1) * sample_duration, :, :
             ].numpy()
             input_reshaped.append(np_frames)
-        outputs.append(np.array(input_reshaped, dtype=np.float32))
-		
-    print(inputs.shape)
-    print(outputs.shape)	
+        outputs.append(np.array(input_reshaped, dtype=np.float32))	
 		
     return outputs
 	
