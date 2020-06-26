@@ -265,7 +265,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         x = Variable(x, requires_grad=True)
 
         # Compute the gradient and return
-        inputs_zero = torch.zeros_like(inputs_t)		
+        inputs_zero = torch.zeros_like(x)		
         model_outputs = detector_and_model(self.my_detector, self.my_model, inputs_zero + x, self.spatial_transform)
         loss = self._loss(model_outputs, y)
 
