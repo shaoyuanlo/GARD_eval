@@ -227,7 +227,7 @@ class MyPytorchClassifier(PyTorchClassifier):
 
         # Convert the inputs to Tensors
         inputs_t = torch.from_numpy(x_preprocessed).to(self._device)
-        inputs_t.requires_grad = True
+        inputs_t.requires_grad_()
 
         # Convert the labels to Tensors
         labels_t = torch.from_numpy(y_preprocessed).to(self._device)
