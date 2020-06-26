@@ -218,7 +218,8 @@ class MyPytorchClassifier(PyTorchClassifier):
         :return: Array of gradients of the same shape as `x`.
         """
         # Apply preprocessing
-        x_preprocessed, y_preprocessed = x, y
+        x_preprocessed = x
+        _, y_preprocessed = self._apply_preprocessing(x, y, fit=False)		
 
         # Check label shape
         if self._reduce_labels:
