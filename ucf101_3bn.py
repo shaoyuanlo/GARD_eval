@@ -235,11 +235,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         # Compute the gradient and return
         model_outputs = detector_and_model(self.my_detector, self.my_model, inputs_t, self.spatial_transform)
 		
-        print(model_outputs.shape)
-        print(model_outputs[-1].shape)		
-        print(model_outputs[-1]==model_outputs)		
-		
-        loss = self._loss(model_outputs[-1], labels_t)
+        loss = self._loss(model_outputs, labels_t)
 
         # Clean gradients
         self.my_model.zero_grad()
