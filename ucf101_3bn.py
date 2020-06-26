@@ -232,8 +232,9 @@ class MyPytorchClassifier(PyTorchClassifier):
         # Convert the labels to Tensors
         labels_t = torch.from_numpy(y_preprocessed).to(self._device)
 
-        # Compute the gradient and return		
-        model_outputs = detector_and_model(self.my_detector, self.my_model, inputs_t, self.spatial_transform)
+        # Compute the gradient and return
+        inputs_zero = torch.zeros_like(inputs_t)		
+        model_outputs = detector_and_model(self.my_detector, self.my_model, inputs_zero + inputs_t, self.spatial_transform)
 		
         loss = self._loss(model_outputs, labels_t)
 
