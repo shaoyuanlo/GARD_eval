@@ -262,7 +262,8 @@ class MyPytorchClassifier(PyTorchClassifier):
             y = torch.argmax(y, dim=1)
 
         # Convert the inputs to Variable
-        x = Variable(x, requires_grad=True)
+        x = Variable(x)
+        x.requires_grad_()		
 
         # Compute the gradient and return
         inputs_zero = torch.zeros_like(x)		
