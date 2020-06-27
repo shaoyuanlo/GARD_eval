@@ -154,7 +154,7 @@ class MyPytorchClassifier(PyTorchClassifier):
 
         # Compute gradients
         if self._layer_idx_gradients < 0:
-            x_preprocessed.requires_grad = True
+            x_preprocessed.requires_grad_()
 
         # Run prediction
         model_outputs = detector_and_model(self.my_detector, self.my_model, x_preprocessed, self.spatial_transform)
