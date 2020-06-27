@@ -146,9 +146,7 @@ def get_art_model(model_kwargs, wrapper_kwargs, weights_file):
         **wrapper_kwargs,
         clip_values=(
             np.transpose(np.zeros((16, 112, 112, 3)) - activity_means, (3, 0, 1, 2)),
-            np.transpose(
-                255.0 * np.ones((16, 112, 112, 3)) - activity_means, (3, 0, 1, 2)
-            ),
+            np.transpose(255.0 * np.ones((16, 112, 112, 3)) - activity_means, (3, 0, 1, 2)),
         ),
     )
     return wrapped_model
