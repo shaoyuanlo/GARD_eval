@@ -364,8 +364,8 @@ def preprocessing_fn(inputs):
 def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
 
     if weights_file:
-        detector_path = maybe_download_weights_from_s3('save_4.pth')
-        pretrain_path = maybe_download_weights_from_s3('save_5.pth')
+        detector_path = maybe_download_weights_from_s3('JHUM_3bn_detector.pth')
+        pretrain_path = maybe_download_weights_from_s3('JHUM_3bn_model.pth')
 
     my_detector = generate_model('resnet')
     detector_data = torch.load(detector_path)
