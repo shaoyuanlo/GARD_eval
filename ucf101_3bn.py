@@ -181,16 +181,16 @@ class MyPytorchClassifier(PyTorchClassifier):
         input_grad.register_hook(save_grad())
 
         self.my_model.zero_grad()
-        if label is None:
-            inputs_zero = torch.zeros_like(preds[:, i])		
+        if label is None:	
             for i in range(self.nb_classes):			
                 torch.autograd.backward(
-                    inputs_zero + preds[:, i], torch.tensor([1.0] * len(preds[:, 0])).to(self._device), retain_graph=True,
+                    preds[:, i], torch.tensor([1.0] * len(preds[:, 0])).to(self._device), retain_graph=True,
                 )
 
         elif isinstance(label, (int, np.integer)):
+            inputs_zero = torch.zeros_like(preds[:, i])		
             torch.autograd.backward(
-                preds[:, label], torch.tensor([1.0] * len(preds[:, 0])).to(self._device), retain_graph=True,
+                inputs_zero + preds[:, label], torch.tensor([1.0] * len(preds[:, 0])).to(self._device), retain_graph=True,
             )
         else:
             unique_label = list(np.unique(label))
