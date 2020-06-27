@@ -166,7 +166,7 @@ class MyPytorchClassifier(PyTorchClassifier):
             input_grad = x_preprocessed
 
         # Set where to get gradient from
-        preds = model_outputs[-1]
+        preds = model_outputs
 
         # Compute the gradient
         grads = []
