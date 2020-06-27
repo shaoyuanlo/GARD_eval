@@ -188,10 +188,8 @@ class MyPytorchClassifier(PyTorchClassifier):
                 )
 
         elif isinstance(label, (int, np.integer)):
-            inputs_zero = torch.zeros_like(preds[:, label])
-            inputs_zero2 = torch.zeros_like(torch.tensor([1.0] * len(preds[:, 0])))		
             torch.autograd.backward(
-                inputs_zero + preds[:, label], inputs_zero2.to(self._device) + torch.tensor([1.0] * len(preds[:, 0])).to(self._device), retain_graph=True,
+                preds[:, label], torch.tensor([1.0] * len(preds[:, 0])).to(self._device), retain_graph=True,
             )
         else:
             unique_label = list(np.unique(label))
