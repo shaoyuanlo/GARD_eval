@@ -166,7 +166,7 @@ class MyPytorchClassifier(PyTorchClassifier):
             input_grad = x_preprocessed
 
         # Set where to get gradient from
-        preds = model_outputs[-1]
+        preds = model_outputs
 
         # Compute the gradient
         grads = []
@@ -182,9 +182,10 @@ class MyPytorchClassifier(PyTorchClassifier):
 
         self.my_model.zero_grad()
         if label is None:
-            for i in range(self.nb_classes):
+            inputs_zero = torch.zeros_like(preds[:, i])		
+            for i in range(self.nb_classes):			
                 torch.autograd.backward(
-                    preds[:, i], torch.tensor([1.0] * len(preds[:, 0])).to(self._device), retain_graph=True,
+                    inputs_zero + preds[:, i], torch.tensor([1.0] * len(preds[:, 0])).to(self._device), retain_graph=True,
                 )
 
         elif isinstance(label, (int, np.integer)):
