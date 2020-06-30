@@ -351,7 +351,7 @@ def preprocessing_fn(inputs):
 
         # reshape
         input_reshaped = []
-        for ns in range(int(total_frames / sample_duration)):
+        for ns in range(max(int(total_frames / sample_duration), 1)):
             np_frames = input_mars_preprocessed[
                 :, ns * sample_duration : (ns + 1) * sample_duration, :, :
             ].numpy()
