@@ -372,7 +372,7 @@ def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
     #detector_data = torch.load(detector_path)
     #my_detector.load_state_dict(detector_data['state_dict'])
 
-    my_model = generate_model('resnext_oudefend')	
+    my_model = generate_model('resnext_oun')	
     model_data = torch.load(pretrain_path)
     my_model.load_state_dict(model_data['state_dict'])
 
