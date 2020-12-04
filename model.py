@@ -16,7 +16,7 @@ def generate_model(model_name):
             cardinality=32,
             sample_size=112, sample_duration=40)
 			
-    elif opt.model == 'resnext_oun':
+    elif model_name == 'resnext_oun':
         model = resnext_oun.resnet101(
             num_classes=101,
             shortcut_type='B',
