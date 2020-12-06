@@ -16,7 +16,7 @@ from utils import *
 from typing import Any, Dict, List, Optional, Tuple, Union, TYPE_CHECKING
 from armory.data.utils import maybe_download_weights_from_s3
 from art.classifiers import PyTorchClassifier
-from art.config import ART_DATA_PATH, CLIP_VALUES_TYPE, PREPROCESSING_TYPE
+from art.config import ART_DATA_PATH, PREPROCESSING_TYPE
 from art.utils import Deprecated
 
 
