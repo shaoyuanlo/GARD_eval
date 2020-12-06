@@ -16,7 +16,6 @@ from utils import *
 from typing import Any, Dict, List, Optional, Tuple, Union, TYPE_CHECKING
 from armory.data.utils import maybe_download_weights_from_s3
 from art.classifiers import PyTorchClassifier
-from art.config import PREPROCESSING_TYPE
 from art.utils import Deprecated
 
 
@@ -57,7 +56,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         clip_values=(0, 1,),
         preprocessing_defences: Union["Preprocessor", List["Preprocessor"], None] = None,
         postprocessing_defences: Union["Postprocessor", List["Postprocessor"], None] = None,
-        preprocessing: PREPROCESSING_TYPE = (0, 1),
+        preprocessing = (0, 1),
         device_type: str = "gpu",
     ):
 
