@@ -377,7 +377,7 @@ def preprocessing_fn_torch(
         There are some
     """
     if not isinstance(batch, torch.Tensor):
-        logger.warning(f"batch {type(batch)} is not a torch.Tensor. Casting")
+        #logger.warning(f"batch {type(batch)} is not a torch.Tensor. Casting")
         batch = torch.from_numpy(batch).to(DEVICE)
         # raise ValueError(f"batch {type(batch)} is not a torch.Tensor")
     if batch.dtype != torch.float32:
@@ -395,7 +395,7 @@ def preprocessing_fn_torch(
     if tuple(video.shape[1:]) == (240, 320, 3):
         standard_shape = True
     elif tuple(video.shape[1:]) == (226, 400, 3):
-        logger.warning("Expected odd example shape (226, 400, 3)")
+        #logger.warning("Expected odd example shape (226, 400, 3)")
         standard_shape = False
     else:
         raise ValueError(f"frame shape {tuple(video.shape[1:])} not recognized")
