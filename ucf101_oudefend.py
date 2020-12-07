@@ -280,7 +280,7 @@ class MyPytorchClassifier(PyTorchClassifier):
 
         return grads  # type: ignore
 
-    def my_preprocess_data(clip): 
+    def my_preprocess_data(self, clip): 
         """Preprocess list(frames) based on train/test and modality.
         Training:
             - Multiscale corner crop
@@ -312,7 +312,7 @@ class MyPytorchClassifier(PyTorchClassifier):
                         
         return(processed_clip)
         
-    def preprocessing_fn(inputs):
+    def preprocessing_fn(self, inputs):
         """
         Inputs is comprised of one or more videos, where each video
         is given as an ndarray with shape (1, time, height, width, 3).
