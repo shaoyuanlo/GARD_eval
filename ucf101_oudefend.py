@@ -378,7 +378,7 @@ def preprocessing_fn_torch(
     """
     if not isinstance(batch, torch.Tensor):
         #logger.warning(f"batch {type(batch)} is not a torch.Tensor. Casting")
-        batch = torch.from_numpy(batch).to(DEVICE)
+        batch = torch.from_numpy(batch).cuda()
         # raise ValueError(f"batch {type(batch)} is not a torch.Tensor")
     if batch.dtype != torch.float32:
         raise ValueError(f"batch {batch.dtype} should be torch.float32")
