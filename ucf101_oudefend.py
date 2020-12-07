@@ -103,7 +103,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         self.my_model.eval()		
 
         # Apply preprocessing
-        x_preprocessed = preprocessing_fn(x)		
+        x_preprocessed = x
 
         # Run prediction with batch processing
         results = np.zeros((x_preprocessed.shape[0], self.nb_classes), dtype=np.float32)
@@ -149,7 +149,7 @@ class MyPytorchClassifier(PyTorchClassifier):
             raise ValueError("Label %s is out of range." % label)
 
         # Apply preprocessing
-        x_preprocessed = preprocessing_fn(x)
+        x_preprocessed = x
         x_preprocessed = torch.from_numpy(x_preprocessed).to(self._device)
 
         # Compute gradients
@@ -218,7 +218,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         :return: Array of gradients of the same shape as `x`.
         """
         # Apply preprocessing
-        x_preprocessed = preprocessing_fn(x)
+        x_preprocessed = x
         _, y_preprocessed = self._apply_preprocessing(x, y, fit=False)		
 
         # Check label shape
