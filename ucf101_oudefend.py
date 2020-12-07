@@ -103,6 +103,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         self.my_model.eval()		
 
         # Apply preprocessing
+        print(x.size)		
         x_preprocessed = x
 
         # Run prediction with batch processing
