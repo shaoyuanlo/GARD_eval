@@ -280,83 +280,85 @@ class MyPytorchClassifier(PyTorchClassifier):
 
         return grads  # type: ignore
 
-    def my_preprocess_data(self, clip): 
-        """Preprocess list(frames) based on train/test and modality.
-        Training:
-            - Multiscale corner crop
-            - Random Horizonatal Flip (change direction of Flow accordingly)
-            - Convert a ``PIL.Image`` or ``numpy.ndarray`` to tensor
-            - Normalize R,G,B based on mean and std of ``ActivityNet``
-        Testing/ Validation:
-            - Scale frame
-            - Center crop
-            - Convert a ``PIL.Image`` or ``numpy.ndarray`` to tensor
-            - Normalize R,G,B based on mean and std of ``ActivityNet``
-        Args:
-            clip (list(frames)): list of RGB/Flow frames
-            train : 1 for train, 0 for test
-        Return:
-            Tensor(frames) of shape C x T x H x W
-        """
+
+def my_preprocess_data(clip): 
+    """Preprocess list(frames) based on train/test and modality.
+    Training:
+        - Multiscale corner crop
+        - Random Horizonatal Flip (change direction of Flow accordingly)
+        - Convert a ``PIL.Image`` or ``numpy.ndarray`` to tensor
+        - Normalize R,G,B based on mean and std of ``ActivityNet``
+    Testing/ Validation:
+        - Scale frame
+        - Center crop
+        - Convert a ``PIL.Image`` or ``numpy.ndarray`` to tensor
+        - Normalize R,G,B based on mean and std of ``ActivityNet``
+    Args:
+        clip (list(frames)): list of RGB/Flow frames
+        train : 1 for train, 0 for test
+    Return:
+        Tensor(frames) of shape C x T x H x W
+    """
+    #opt.modality == 'RGB':
+    processed_clip = torch.Tensor(3, len(clip), 112, 112)
+   
+    for i, I in enumerate(clip):
+        I = Scale(112)(I)
+        I = CenterCrop(112)(I)
+        I = torchvision.transforms.ToTensor()(I)
+
         #opt.modality == 'RGB':
-        processed_clip = torch.Tensor(3, len(clip), 112, 112)
-       
-        for i, I in enumerate(clip):
-            I = Scale(112)(I)
-            I = CenterCrop(112)(I)
-            I = torchvision.transforms.ToTensor()(I)
+        #I = Normalize(get_mean('activitynet'), [1,1,1])(I)
+        processed_clip[:, i, :, :] = I
+                    
+    return(processed_clip)
+
     
-            #opt.modality == 'RGB':
-            #I = Normalize(get_mean('activitynet'), [1,1,1])(I)
-            processed_clip[:, i, :, :] = I
-                        
-        return(processed_clip)
-        
-    def preprocessing_fn(self, inputs):
-        """
-        Inputs is comprised of one or more videos, where each video
-        is given as an ndarray with shape (1, time, height, width, 3).
-        Preprocessing resizes the height and width to 112 x 112 and reshapes
-        each video to (n_stack, 3, 16, height, width), where n_stack = int(time/16).
-        Outputs is a list of videos, each of shape (n_stack, 3, 16, 112, 112)
-        """
-        sample_duration = 40  # expected number of consecutive frames as input to the model
-        outputs = []
-        if inputs.dtype == np.uint8:  # inputs is a single video, i.e., batch size == 1
-            inputs = [inputs]
-        # else, inputs is an ndarray (of type object) of ndarrays
-        for (
-            input
-        ) in inputs:  # each input is (1, time, height, width, 3) from the same video
-            input = np.squeeze(input)
-    
-            # select a fixed number of consecutive frames
-            total_frames = input.shape[0]
-            if total_frames <= sample_duration:  # cyclic pad if not enough frames
-                input_fixed = np.vstack(
-                    (input, input[: sample_duration - total_frames, ...])
-                )
-                assert input_fixed.shape[0] == sample_duration
-            else:
-                input_fixed = input
-    
-            # apply MARS preprocessing: scaling, cropping, normalizing
-            # opt = parse_opts(arguments=[]), opt.modality = "RGB", opt.sample_size = 112
-            input_Image = []  # convert each frame to PIL Image
-            for f in input_fixed:
-                input_Image.append(Image.fromarray(f))
-            input_mars_preprocessed = my_preprocess_data(input_Image)
-    
-            # reshape
-            input_reshaped = []
-            for ns in range(max(int(total_frames / sample_duration), 1)):
-                np_frames = input_mars_preprocessed[
-                    :, ns * sample_duration : (ns + 1) * sample_duration, :, :
-                ].numpy()
-                input_reshaped.append(np_frames)
-            outputs.append(np.array(input_reshaped, dtype=np.float32))	
-    		
-        return outputs
+def preprocessing_fn(inputs):
+    """
+    Inputs is comprised of one or more videos, where each video
+    is given as an ndarray with shape (1, time, height, width, 3).
+    Preprocessing resizes the height and width to 112 x 112 and reshapes
+    each video to (n_stack, 3, 16, height, width), where n_stack = int(time/16).
+    Outputs is a list of videos, each of shape (n_stack, 3, 16, 112, 112)
+    """
+    sample_duration = 40  # expected number of consecutive frames as input to the model
+    outputs = []
+    if inputs.dtype == np.uint8:  # inputs is a single video, i.e., batch size == 1
+        inputs = [inputs]
+    # else, inputs is an ndarray (of type object) of ndarrays
+    for (
+        input
+    ) in inputs:  # each input is (1, time, height, width, 3) from the same video
+        input = np.squeeze(input)
+
+        # select a fixed number of consecutive frames
+        total_frames = input.shape[0]
+        if total_frames <= sample_duration:  # cyclic pad if not enough frames
+            input_fixed = np.vstack(
+                (input, input[: sample_duration - total_frames, ...])
+            )
+            assert input_fixed.shape[0] == sample_duration
+        else:
+            input_fixed = input
+
+        # apply MARS preprocessing: scaling, cropping, normalizing
+        # opt = parse_opts(arguments=[]), opt.modality = "RGB", opt.sample_size = 112
+        input_Image = []  # convert each frame to PIL Image
+        for f in input_fixed:
+            input_Image.append(Image.fromarray(f))
+        input_mars_preprocessed = my_preprocess_data(input_Image)
+
+        # reshape
+        input_reshaped = []
+        for ns in range(max(int(total_frames / sample_duration), 1)):
+            np_frames = input_mars_preprocessed[
+                :, ns * sample_duration : (ns + 1) * sample_duration, :, :
+            ].numpy()
+            input_reshaped.append(np_frames)
+        outputs.append(np.array(input_reshaped, dtype=np.float32))	
+		
+    return outputs
 	
 	
 def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
