@@ -416,7 +416,8 @@ def preprocessing_fn_torch(
         video = torch.cat([video, video[: consecutive_frames - len(video)]])
     if len(video) % consecutive_frames != 0:
         # cut trailing frames
-        video = video[: len(video) - (len(video) % consecutive_frames)]
+        #video = video[: len(video) - (len(video) % consecutive_frames)]
+        video = video[: consecutive_frames]
 
     # Attempts to directly follow MARS approach
     # (frames, height, width, channel) to (frames, channel, height, width)
