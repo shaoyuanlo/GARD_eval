@@ -282,8 +282,8 @@ class MyPytorchClassifier(PyTorchClassifier):
         # Compute gradients
         loss.backward()
         grads = x.grad
+        print('BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB')		
         assert grads.shape == x.shape  # type: ignore
-        print('BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB')
 		
         return grads  # type: ignore
 
