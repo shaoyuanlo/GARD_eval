@@ -417,7 +417,7 @@ def preprocessing_fn_torch(
     while len(video) < consecutive_frames:
         # cyclic pad if insufficient for a single stack
         video = torch.cat([video, video[: consecutive_frames - len(video)]])
-    if len(video) % consecutive_frames != 0:
+    if len(video) > consecutive_frames:
         # cut trailing frames
         #video = video[: len(video) - (len(video) % consecutive_frames)]
         video = video[: consecutive_frames]
