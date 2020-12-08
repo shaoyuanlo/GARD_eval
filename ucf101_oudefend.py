@@ -230,7 +230,8 @@ class MyPytorchClassifier(PyTorchClassifier):
             y_preprocessed = np.argmax(y_preprocessed, axis=1)
 
         # Convert the inputs to Tensors
-        inputs_t = torch.from_numpy(x_preprocessed).to(self._device)
+        #inputs_t = torch.from_numpy(x_preprocessed).to(self._device)
+        inputs_t = x_preprocessed.to(self._device)
         inputs_t.requires_grad_()
 
         # Convert the labels to Tensors
@@ -266,6 +267,7 @@ class MyPytorchClassifier(PyTorchClassifier):
             y = torch.argmax(y, dim=1)
 
         # Convert the inputs to Variable
+        x = preprocessing_fn_torch(x)		
         x = Variable(x)
         x.requires_grad_()		
 
