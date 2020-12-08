@@ -446,7 +446,8 @@ def preprocessing_fn_torch(
         raise ValueError("Video under min after interpolation")
 
     # reshape into stacks of frames
-    video = torch.reshape(video, (-1, consecutive_frames) + video.shape[1:])
+    #video = torch.reshape(video, (-1, consecutive_frames) + video.shape[1:])
+    video = torch.unsqueeze(video, 0)
 
     # transpose to (stacks, channel, stack_frames, height, width)
     video = video.permute(0, 2, 1, 3, 4)
