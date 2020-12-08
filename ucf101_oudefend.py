@@ -113,8 +113,10 @@ class MyPytorchClassifier(PyTorchClassifier):
             begin, end = (m * batch_size, min((m + 1) * batch_size, x_preprocessed.shape[0]),)
 			
             #my_inputs = torch.from_numpy(x_preprocessed[begin:end]).to(self._device)
-            #my_inputs = x_preprocessed[begin:end].to(self._device)
-            my_inputs = x_preprocessed.to(self._device)
+            my_inputs = x_preprocessed[begin:end].to(self._device)
+            #my_inputs = x_preprocessed.to(self._device)
+            print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+            print(my_inputs.shape)
 
             with torch.no_grad():
                 model_outputs = detector_and_model(self.my_detector, self.my_model, my_inputs, self.spatial_transform)
