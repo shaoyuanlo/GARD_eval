@@ -115,8 +115,8 @@ class MyPytorchClassifier(PyTorchClassifier):
             #my_inputs = torch.from_numpy(x_preprocessed[begin:end]).to(self._device)
             my_inputs = x_preprocessed[begin:end].to(self._device)
             #my_inputs = x_preprocessed.to(self._device)
-            print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-            print(my_inputs.shape)
+            #print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+            #print(my_inputs.shape)
 
             with torch.no_grad():
                 model_outputs = detector_and_model(self.my_detector, self.my_model, my_inputs, self.spatial_transform)
@@ -282,7 +282,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         # Compute gradients
         loss.backward()
         grads = x.grad
-        print('BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB')		
+        #print('BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB')		
         assert grads.shape == x.shape  # type: ignore
 		
         return grads  # type: ignore
