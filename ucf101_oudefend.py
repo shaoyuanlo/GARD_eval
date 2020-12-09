@@ -211,6 +211,9 @@ class MyPytorchClassifier(PyTorchClassifier):
 
         grads = np.swapaxes(np.array(grads), 0, 1)
         grads = preprocessing_fn_inverse_torch(x, grads)
+        print('BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB')		
+        print(x.shape)		
+        print(grads.shape)		
 
         return grads
 
