@@ -406,7 +406,7 @@ def preprocessing_fn_inverse_torch(x, grads):
     if x.shape[1] <= consecutive_frames:
         grads = grads[:, :x.shape[1], :, :]
     else:
-        grads = torch.cat([grads, torch.zeros(x.shape[0], x.shape[1]-consecutive_frames ,x.shape[2], x.shape[3])], dim=1)
+        grads = torch.cat([grads, torch.zeros(x.shape[0], x.shape[1]-consecutive_frames ,x.shape[2], x.shape[3]).to(self._device)], dim=1)
 
     # (channel, frames, height, width) to (frames, height, width, channel)
     grads = grads.permute(1, 2, 3, 0)
