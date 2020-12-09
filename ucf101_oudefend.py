@@ -251,6 +251,9 @@ class MyPytorchClassifier(PyTorchClassifier):
         loss.backward()
         grads = inputs_t.grad.cpu().numpy().copy()  # type: ignore
         grads = preprocessing_fn_inverse_torch(x, grads)
+        print('BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB')		
+        print(x.shape)		
+        print(grads.shape)		
         assert grads.shape == x.shape
 
         return grads
