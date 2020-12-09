@@ -142,7 +142,7 @@ def make_model(
     if not trained and weights_path is None:
         raise ValueError("weights_path cannot be None for 'kinetics_pretrained'")
 
-    opt = parse_opts(arguments=[])
+    opt = parse_opts()
     opt.dataset = "UCF101"
     opt.only_RGB = True
     opt.log = 0
@@ -160,7 +160,7 @@ def make_model(
         opt.pretrain_path = weights_path
 
     logger.info(f"Loading model... {opt.model} {opt.model_depth}")
-    model, parameters = generate_model(opt)
+    model = generate_model('resnext_oun')
 
     if trained and weights_path is not None:
         checkpoint = torch.load(weights_path, map_location=DEVICE)
