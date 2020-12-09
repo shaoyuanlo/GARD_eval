@@ -209,7 +209,7 @@ class MyPytorchClassifier(PyTorchClassifier):
             grads = grads[None, ...]
 
         grads = np.swapaxes(np.array(grads), 0, 1)
-        grads = self._apply_preprocessing_gradient(x, grads)
+        #grads = self._apply_preprocessing_gradient(x, grads)
 
         return grads
 
@@ -249,7 +249,7 @@ class MyPytorchClassifier(PyTorchClassifier):
         # Compute gradients
         loss.backward()
         grads = inputs_t.grad.cpu().numpy().copy()  # type: ignore
-        grads = self._apply_preprocessing_gradient(x, grads)
+        #grads = self._apply_preprocessing_gradient(x, grads)
         assert grads.shape == x.shape
 
         return grads
