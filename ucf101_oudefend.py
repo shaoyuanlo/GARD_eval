@@ -430,7 +430,14 @@ def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
 
     spatial_transform = Compose([Scale(112), CenterCrop(112), torchvision.transforms.ToTensor()])
 
-    wrapped_model = MyPytorchClassifier(my_model, my_model, spatial_transform)
+    wrapped_model = PyTorchClassifier(
+        my_model,
+        loss=torch.nn.CrossEntropyLoss(),
+        optimizer=model.optimizer,
+        input_shape=(None, 240, 320, 3),
+        nb_classes=101,
+        clip_values=(0.0, 1.0),
+    )
 	
     return wrapped_model
 
