@@ -433,7 +433,7 @@ def get_my_model(model_kwargs, wrapper_kwargs, weights_file):
     wrapped_model = PyTorchClassifier(
         my_model,
         loss=torch.nn.CrossEntropyLoss(),
-        optimizer=model.optimizer,
+        optimizer=my_model.optimizer,
         input_shape=(None, 240, 320, 3),
         nb_classes=101,
         clip_values=(0.0, 1.0),
