@@ -186,7 +186,6 @@ def get_my_model(
     wrapped_model = PyTorchClassifier(
         model,
         loss=torch.nn.CrossEntropyLoss(),
-        optimizer=model.optimizer,
         input_shape=(None, 240, 320, 3),
         nb_classes=101,
         clip_values=(0.0, 1.0),
