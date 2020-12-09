@@ -12,7 +12,6 @@ from PIL import Image
 import torch
 from torch import optim
 
-from opts import parse_opts
 from model import generate_model
 
 logger = logging.getLogger(__name__)
