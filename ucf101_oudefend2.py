@@ -135,56 +135,12 @@ def preprocessing_fn_torch(
 def make_model(
     model_status: str = "ucf101_trained", weights_path: Optional[str] = None
 ) -> Tuple[torch.nn.DataParallel, optim.SGD]:
-    statuses = ("ucf101_trained", "kinetics_pretrained")
-    if model_status not in statuses:
-        raise ValueError(f"model_status {model_status} not in {statuses}")
-    trained = model_status == "ucf101_trained"
-    if not trained and weights_path is None:
-        raise ValueError("weights_path cannot be None for 'kinetics_pretrained'")
 
-    opt = parse_opts()
-    opt.dataset = "UCF101"
-    opt.only_RGB = True
-    opt.log = 0
-    opt.batch_size = 1
-    opt.arch = f"{opt.model}-{opt.model_depth}"
-
-    if trained:
-        opt.n_classes = 101
-    else:
-        opt.n_classes = 400
-        opt.n_finetune_classes = 101
-        opt.batch_size = 32
-        opt.ft_begin_index = 4
-
-        opt.pretrain_path = weights_path
-
-    logger.info(f"Loading model... {opt.model} {opt.model_depth}")
     model = generate_model('resnext_oun')
+    checkpoint = torch.load(weights_path, map_location=DEVICE)
+    model.load_state_dict(checkpoint["state_dict"])
 
-    if trained and weights_path is not None:
-        checkpoint = torch.load(weights_path, map_location=DEVICE)
-        model.load_state_dict(checkpoint["state_dict"])
-
-    # Initializing the optimizer
-    if opt.pretrain_path:
-        opt.weight_decay = 1e-5
-        opt.learning_rate = 0.001
-    if opt.nesterov:
-        dampening = 0
-    else:
-        dampening = opt.dampening
-
-    optimizer = optim.SGD(
-        parameters,
-        lr=opt.learning_rate,
-        momentum=opt.momentum,
-        dampening=dampening,
-        weight_decay=opt.weight_decay,
-        nesterov=opt.nesterov,
-    )
-
-    return model, optimizer
+    return model
 
 
 class OuterModel(torch.nn.Module):
@@ -202,7 +158,7 @@ class OuterModel(torch.nn.Module):
         if max_frames < 0:
             raise ValueError(f"max_frames {max_frames} cannot be negative")
         self.max_frames = max_frames
-        self.model, self.optimizer = make_model(
+        self.model = make_model(
             weights_path=weights_path, **model_kwargs
         )
 
