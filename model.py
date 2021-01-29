@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 
-from models import resnet, resnext_3bn, resnext_oun
+from models import resnet, resnext_3bn, resnext, resnext_oun
 
 
 def generate_model(model_name):
@@ -15,6 +15,14 @@ def generate_model(model_name):
         model = resnext_3bn.resnet101(num_classes=101, shortcut_type='B',
             cardinality=32,
             sample_size=112, sample_duration=40)
+
+    elif model_name == 'resnext':
+        model = resnext.resnet101(
+            num_classes=101,
+            shortcut_type='B',
+            cardinality=32,
+            sample_size=112,
+            sample_duration=40)
 			
     elif model_name == 'resnext_oun':
         model = resnext_oun.resnet101(
