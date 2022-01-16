@@ -138,11 +138,12 @@ def make_model(
     model = generate_model('resnext_3bn_comb')
     checkpoint = torch.load(weights_path, map_location=DEVICE)
 
-    model_dict = model.state_dict()	
-    for k, v in checkpoint['state_dict'].items():
-        k = k.replace('.module', '')
-        model_dict[k] = v
-    model.load_state_dict(model_dict)
+    #model_dict = model.state_dict()	
+    #for k, v in checkpoint['state_dict'].items():
+    #    k = k.replace('.module', '')
+    #    model_dict[k] = v
+    #model.load_state_dict(model_dict)
+    model.load_state_dict(checkpoint)
 
     return model
 
