@@ -36,6 +36,6 @@ def generate_model(model_name):
             sample_duration=40)			
 
     #model = model.cuda()
-    model = nn.DataParallel(model, device_ids=None)
+    #model = nn.DataParallel(model, device_ids=None)
 
     return model
