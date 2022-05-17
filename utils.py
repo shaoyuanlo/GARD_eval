@@ -94,6 +94,40 @@ def calculate_accuracy_mine(outputs, targets):
     n_correct_elems = correct.float().sum()#.data[0]
 
     return n_correct_elems / batch_size, pred
+
+
+def get_opt(args=None):
+    opt = parse_opts(args)
+
+    if opt.root_path is not None:
+        opt.video_path = opt.root_path / opt.video_path
+        opt.annotation_path = opt.root_path / opt.annotation_path
+        opt.result_path = opt.root_path / opt.result_path
+        if opt.resume_path is not None:
+            opt.resume_path = opt.root_path / opt.resume_path
+        if opt.pretrain_path is not None:
+            opt.pretrain_path = opt.root_path / opt.pretrain_path
+
+    if opt.pretrain_path is not None:
+        opt.n_finetune_classes = opt.n_classes
+        opt.n_classes = opt.n_pretrain_classes
+
+    if opt.output_topk <= 0:
+        opt.output_topk = opt.n_classes
+
+    if opt.inference_batch_size == 0:
+        opt.inference_batch_size = opt.batch_size
+
+    opt.arch = '{}-{}'.format(opt.model, opt.model_depth)
+    opt.begin_epoch = 1
+    opt.mean, opt.std = get_mean_std(opt.value_scale, dataset=opt.mean_dataset)
+    opt.n_input_channels = 3
+    if opt.input_type == 'flow':
+        opt.n_input_channels = 2
+        opt.mean = opt.mean[:2]
+        opt.std = opt.std[:2]
+
+    return opt
     
     
 def idx_to_name(idx):
