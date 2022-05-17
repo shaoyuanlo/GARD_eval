@@ -23,7 +23,7 @@ from model import generate_model, make_data_parallel
 #from utils import Logger, worker_init_fn, get_lr
 # from validation import val_epoch
 
-from 3D_ResNets.datasets import preprocess_data
+from datasets import preprocess_data
 
 import pdb
 
