@@ -17,7 +17,7 @@ from PIL import Image
 
 from opts import parse_opts
 from model import generate_model, make_data_parallel
-from mean import get_mean_std
+#from mean import get_mean_std
 
 from dataset import get_validation_data
 from utils import Logger, worker_init_fn, get_lr
