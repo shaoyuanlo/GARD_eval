@@ -33,8 +33,8 @@ from utils import *
 import logging
 from typing import Union, Optional, Tuple
 
-# from art.estimators.classification import PyTorchClassifier
-from art.classifiers import PyTorchClassifier
+from art.estimators.classification import PyTorchClassifier
+#from art.classifiers import PyTorchClassifier
 
    
 logger = logging.getLogger(__name__)
