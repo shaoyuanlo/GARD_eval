@@ -15,7 +15,7 @@ from PIL import Image
 
 from spatial_transforms import Compose, Scale, CenterCrop
 from dataset import Video_detect, Video_detect_open
-from opts_detect import parse_opts
+from opts_kk import parse_opts
 from model import generate_model
 from model_detect import generate_model_detect
 from mean import get_mean
