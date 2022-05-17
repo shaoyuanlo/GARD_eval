@@ -16,8 +16,7 @@ import torchvision
 from PIL import Image
 
 from opts import parse_opts
-from model import (generate_model, load_pretrained_model, make_data_parallel,
-                   get_fine_tuning_parameters)
+from model import generate_model, make_data_parallel
 from mean import get_mean_std
 
 from dataset import get_validation_data
