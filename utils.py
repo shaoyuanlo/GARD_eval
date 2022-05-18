@@ -118,7 +118,7 @@ def get_opt(args=None):
     if opt.inference_batch_size == 0:
         opt.inference_batch_size = opt.batch_size
 
-    opt.arch = '{}-{}'.format(opt.model_name, opt.model_depth)
+    opt.arch = '{}-{}'.format(opt.model, opt.model_depth)
     opt.begin_epoch = 1
     opt.mean, opt.std = get_mean_std(opt.value_scale, dataset=opt.mean_dataset)
     opt.n_input_channels = 3
