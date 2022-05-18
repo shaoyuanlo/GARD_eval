@@ -248,7 +248,7 @@ def make_model(
         torchvision.set_image_backend('accimage')
 
     opt.resume_path = weights_path
-    model = generate_model(opt.model)
+    model = generate_model(opt.model, sample_duration=16)
 
     if opt.use_ape:
         in_ch = 3
