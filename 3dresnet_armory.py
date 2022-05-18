@@ -248,14 +248,16 @@ def make_model(
         torchvision.set_image_backend('accimage')
 
     opt.resume_path = weights_path
+	
     #model = generate_model(opt.model, sample_duration=16)
-    model = generate_model('resnext_3bn_comb')
+    model = generate_model('resnext_3bn_comb')  # Mine
 
     if opt.use_ape:
         in_ch = 3
         G = Generator(in_ch).to(opt.device)
 
-    model = resume_model(opt.resume_path, opt.arch, model)
+    #model = resume_model(opt.resume_path, opt.arch, model)
+    model = resume_model_my(opt.resume_path, opt.arch, model)  # Mine
 
 
     model = make_data_parallel(model, opt.distributed, opt.device)

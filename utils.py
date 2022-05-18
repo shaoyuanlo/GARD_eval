@@ -134,14 +134,28 @@ def resume_model(resume_path, arch, model):
     print('loading checkpoint {} model'.format(resume_path))
     checkpoint = torch.load(resume_path, map_location='cpu')
 
-    #assert arch == checkpoint['arch']
+    assert arch == checkpoint['arch']
 
     if hasattr(model, 'module'):
         model.module.load_state_dict(checkpoint['state_dict'])
     else:
         model.load_state_dict(checkpoint['state_dict'])
 
-    return model    
+    return model
+
+
+def resume_model_my(resume_path, arch, model):
+    print('loading checkpoint {} model'.format(resume_path))
+    checkpoint = torch.load(resume_path, map_location='cpu')
+
+    model_dict = model.state_dict()	
+    for k, v in checkpoint['state_dict'].items():
+        k = k.replace('.module', '')
+        model_dict[k] = v
+    model.load_state_dict(model_dict)
+    #model.load_state_dict(checkpoint)
+
+    return model
 
     
 def idx_to_name(idx):
