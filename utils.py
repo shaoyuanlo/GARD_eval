@@ -97,7 +97,8 @@ def calculate_accuracy_mine(outputs, targets):
 
 
 def get_opt(args=None):
-    opt = parse_opts(args)
+    #opt = parse_opts(args)
+    opt = args
 
     if opt.root_path is not None:
         opt.video_path = opt.root_path / opt.video_path
