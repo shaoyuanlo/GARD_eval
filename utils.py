@@ -128,7 +128,21 @@ def get_opt(args=None):
         opt.std = opt.std[:2]
 
     return opt
-    
+
+
+def resume_model(resume_path, arch, model):
+    print('loading checkpoint {} model'.format(resume_path))
+    checkpoint = torch.load(resume_path, map_location='cpu')
+
+    assert arch == checkpoint['arch']
+
+    if hasattr(model, 'module'):
+        model.module.load_state_dict(checkpoint['state_dict'])
+    else:
+        model.load_state_dict(checkpoint['state_dict'])
+
+    return model    
+
     
 def idx_to_name(idx):
     if idx==0:
