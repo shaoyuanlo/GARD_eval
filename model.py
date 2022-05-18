@@ -17,7 +17,7 @@ def generate_model(model_name, sample_duration=40):
             sample_size=112, sample_duration=sample_duration)
 
     elif model_name == 'resnext_3bn_comb':
-        model = resnext_3bn_comb.resnext101_resnet50_test()	
+        model = resnext_3bn_comb.resnext101_resnet50_test(sample_duration)	
 
     elif model_name == 'resnext':
         model = resnext.resnet101(
