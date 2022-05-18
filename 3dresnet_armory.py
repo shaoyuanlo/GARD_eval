@@ -250,7 +250,7 @@ def make_model(
     opt.resume_path = weights_path
 	
     #model = generate_model(opt.model, sample_duration=16)
-    model = generate_model('resnext_3bn_comb')  # Mine
+    model = generate_model('resnext_3bn_comb', sample_duration=16)  # Mine
 
     if opt.use_ape:
         in_ch = 3
