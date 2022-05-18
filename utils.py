@@ -18,7 +18,7 @@ from dataset import Video_detect, Video_detect_open
 from opts_kk import parse_opts
 from model import generate_model
 from model_detect import generate_model_detect
-from mean import get_mean
+from mean import get_mean, get_mean_std
 from utils import *
 
 from advertorch.attacks.my_videoattack_bn import LinfPGDAttack_bn
