@@ -20,7 +20,6 @@ def generate_model(model_name):
         model = resnext_3bn_comb.resnext101_resnet50_test()	
 
     elif model_name == 'resnext':
-        print('AAAAAAAAAAAAAAAAAAAAAAAAAAAA')
         model = resnext.resnet101(
             num_classes=101,
             shortcut_type='B',

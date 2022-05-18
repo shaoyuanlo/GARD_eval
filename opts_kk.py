@@ -215,7 +215,7 @@ def parse_opts(arguments=None):
                         type=int,
                         help='Trained model is saved at every this epochs.')
     parser.add_argument(
-        '--model_name',
+        '--model',
         default='resnet',
         type=str,
         help=

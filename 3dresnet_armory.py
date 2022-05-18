@@ -39,7 +39,7 @@ from art.estimators.classification import PyTorchClassifier
    
 logger = logging.getLogger(__name__)
     
-opt = get_opt(['--attack_type','pgd_inf', '--n_classes', '101', '--model_depth', '101', '--model_name', 'resnext', 
+opt = get_opt(['--attack_type','pgd_inf', '--n_classes', '101', '--model_depth', '101', '--model', 'resnext', 
           '--no_mean_norm', '--no_std_norm']) # '--use_ape'
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -248,7 +248,7 @@ def make_model(
         torchvision.set_image_backend('accimage')
 
     opt.resume_path = weights_path
-    model = generate_model(opt)
+    model = generate_model(opt.model)
 
     if opt.use_ape:
         in_ch = 3
