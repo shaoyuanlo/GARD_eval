@@ -63,31 +63,31 @@ class Halftone(nn.Module):
         # Non-bottom of Image		
         for r in range(H-1):
             # Left Boundary of Image
-            out[:,:,r,0] = torch.round(x[:,:,r,0], decimals=self.factor)
-            error = x[:,:,r,0] - out[:,:,r,0]
-            x[:,:,r,1] = x[:,:,r,1] + error * 7/16
-            x[:,:,r+1,1] = x[:,:,r+1,1] + error * 1/16
-            x[:,:,r+1,0] = x[:,:,r+1,0] + error * 5/16
+            out[:,:,:,r,0] = torch.round(x[:,:,:,r,0], decimals=self.factor)
+            error = x[:,:,:,r,0] - out[:,:,:,r,0]
+            x[:,:,:,r,1] = x[:,:,:,r,1] + error * 7/16
+            x[:,:,:,r+1,1] = x[:,:,:,r+1,1] + error * 1/16
+            x[:,:,:,r+1,0] = x[:,:,:,r+1,0] + error * 5/16
             # Center of Image
             for c in range(1, W-1):
-                out[:,:,r,c] = torch.round(x[:,:,r,c], decimals=self.factor)
-                error = x[:,:,r,c] - out[:,:,r,c]
-                x[:,:,r,c+1] = x[:,:,r,c+1] + error * 7/16
-                x[:,:,r+1,c+1] = x[:,:,r+1,c+1] + error * 1/16
-                x[:,:,r+1,c] = x[:,:,r+1,c] + error * 5/16
-                x[:,:,r+1,c-1] = x[:,:,r+1,c-1] + error * 3/16
+                out[:,:,:,r,c] = torch.round(x[:,:,:,r,c], decimals=self.factor)
+                error = x[:,:,:,r,c] - out[:,:,:,r,c]
+                x[:,:,:,r,c+1] = x[:,:,:,r,c+1] + error * 7/16
+                x[:,:,:,r+1,c+1] = x[:,:,:,r+1,c+1] + error * 1/16
+                x[:,:,:,r+1,c] = x[:,:,:,r+1,c] + error * 5/16
+                x[:,:,:,r+1,c-1] = x[:,:,:,r+1,c-1] + error * 3/16
             # Right Boundary of Image
-            out[:,:,r,W-1] = torch.round(x[:,:,r,W-1], decimals=self.factor)
-            error = x[:,:,r,W-1] - out[:,:,r,W-1]
-            x[:,:,r+1,W-1] = x[:,:,r+1,W-1] + error * 5/16
-            x[:,:,r+1,W-2] = x[:,:,r+1,W-2] + error * 3/16
+            out[:,:,:,r,W-1] = torch.round(x[:,:,:,r,W-1], decimals=self.factor)
+            error = x[:,:,:,r,W-1] - out[:,:,:,r,W-1]
+            x[:,:,:,r+1,W-1] = x[:,:,:,r+1,W-1] + error * 5/16
+            x[:,:,:,r+1,W-2] = x[:,:,:,r+1,W-2] + error * 3/16
  
         # Bottom of Image
         for c in range(0, W-1):
-            out[:,:,H-1,c] = torch.round(x[:,:,H-1,c], decimals=self.factor)
-            error = x[:,:,H-1,c] - out[:,:,H-1,c]
-            x[:,:,H-1,c+1] = x[:,:,H-1,c+1] + error * 7/16
-        out[:,:,H-1,W-1] = torch.round(x[:,:,H-1,W-1], decimals=self.factor)			
+            out[:,:,:,H-1,c] = torch.round(x[:,:,:,H-1,c], decimals=self.factor)
+            error = x[:,:,:,H-1,c] - out[:,:,:,H-1,c]
+            x[:,:,:,H-1,c+1] = x[:,:,:,H-1,c+1] + error * 7/16
+        out[:,:,:,H-1,W-1] = torch.round(x[:,:,:,H-1,W-1], decimals=self.factor)			
 
         return out
 
@@ -367,12 +367,16 @@ class OuterModel(torch.nn.Module):
             return self.model(x)
         else:
             x = preprocessing_fn_torch(x)
-            print(x)
             print(x.min())
+            print(x.median())
             print(x.max())
             print(x.shape)
-            jjj=kkk
             x = self.halftone(x)
+            print(x.min())
+            print(x.median())
+            print(x.max())
+            print(x.shape)
+            jjj=kkk			
             stack_outputs = self.model(x)
             output = stack_outputs.mean(axis=0, keepdims=True)
 
