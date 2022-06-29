@@ -57,7 +57,7 @@ class Halftone(nn.Module):
     def forward(self, input):
 
         x = torch.clone(input)
-        _, _, H, W = x.shape
+        _, _, _, H, W = x.shape
         out = torch.zeros_like(x)
 
         # Non-bottom of Image		
