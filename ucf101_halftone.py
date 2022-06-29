@@ -368,6 +368,8 @@ class OuterModel(torch.nn.Module):
         else:
             x = preprocessing_fn_torch(x)
             print(x)
+            print(x.min())
+            print(x.max())
             print(x.shape)
             jjj=kkk
             x = self.halftone(x)
