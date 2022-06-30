@@ -367,16 +367,7 @@ class OuterModel(torch.nn.Module):
             return self.model(x)
         else:
             x = preprocessing_fn_torch(x)
-            print(x.min())
-            print(x.median())
-            print(x.max())
-            print(x.shape)
             x = self.halftone(x)
-            print(x.min())
-            print(x.median())
-            print(x.max())
-            print(x.shape)
-            jjj=kkk			
             stack_outputs = self.model(x)
             output = stack_outputs.mean(axis=0, keepdims=True)
 
