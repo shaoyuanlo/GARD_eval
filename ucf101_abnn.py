@@ -256,8 +256,8 @@ def make_model(
         in_ch = 3
         G = Generator(in_ch).to(opt.device)
 
-    model = resume_model(opt.resume_path, opt.arch, model)
-    #model = resume_model_my(opt.resume_path, opt.arch, model)  # Mine
+    #model = resume_model(opt.resume_path, opt.arch, model)
+    model = resume_model_my2(opt.resume_path, opt.arch, model)  # Mine
 
 
     model = make_data_parallel(model, opt.distributed, opt.device)

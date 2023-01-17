@@ -157,6 +157,17 @@ def resume_model_my(resume_path, arch, model):
 
     return model
 
+
+def resume_model_my2(resume_path, arch, model):
+    print('loading checkpoint {} model'.format(resume_path))
+    checkpoint = torch.load(resume_path, map_location='cpu')
+
+    assert arch == checkpoint['arch']
+
+    model.load_state_dict(checkpoint['state_dict'])
+
+    return model
+
     
 def idx_to_name(idx):
     if idx==0:
