@@ -260,7 +260,7 @@ def make_model(
     #model = resume_model_my(opt.resume_path, opt.arch, model)  # Mine
 
 
-    model = make_data_parallel(model, opt.distributed, opt.device)
+    #model = make_data_parallel(model, opt.distributed, opt.device)
 
     if opt.use_ape:
     #         G = make_data_parallel(G, opt.distributed, opt.device)
