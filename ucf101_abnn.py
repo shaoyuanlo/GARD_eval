@@ -99,7 +99,7 @@ def preprocessing_fn_numpy(batch: np.ndarray):
 
 def preprocessing_fn_torch(
     batch: Union[torch.Tensor, np.ndarray],
-    consecutive_frames: int = 16,
+    consecutive_frames: int = 40,
     scale_first: bool = True,
     align_corners: bool = False,
 ):
