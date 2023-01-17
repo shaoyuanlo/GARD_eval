@@ -39,7 +39,9 @@ def generate_model(model_name, sample_duration=40):
             sample_duration=sample_duration)			
 
     #model = model.cuda()
-    model = nn.DataParallel(model, device_ids=None)
+    #model = nn.DataParallel(model, device_ids=None)
+    model.resnet = nn.DataParallel(model.resnet, device_ids=None)
+    model.resnext = nn.DataParallel(model.resnext, device_ids=None)
 
     return model
 
