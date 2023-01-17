@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 
-from models import resnet, resnext_3bn, resnext, resnext_oun, resnext_3bn_comb
+from models import resnet, resnext_3bn, resnext, resnext_oun, resnext_3bn_comb, resnext_onthefly
 
 
 def generate_model(model_name, sample_duration=40):
@@ -18,6 +18,9 @@ def generate_model(model_name, sample_duration=40):
 
     elif model_name == 'resnext_3bn_comb':
         model = resnext_3bn_comb.resnext101_resnet50_test(sample_duration)	
+
+    elif model_name == 'resnext_onthefly':
+        model = resnext_onthefly.resnext101_resnet18_test(sample_duration)
 
     elif model_name == 'resnext':
         model = resnext.resnet101(
