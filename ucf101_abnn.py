@@ -99,7 +99,7 @@ def preprocessing_fn_numpy(batch: np.ndarray):
 
 def preprocessing_fn_torch(
     batch: Union[torch.Tensor, np.ndarray],
-    consecutive_frames: int = 40,
+    consecutive_frames: int = 16,
     scale_first: bool = True,
     align_corners: bool = False,
 ):
@@ -250,7 +250,7 @@ def make_model(
     opt.resume_path = weights_path
 	
     #model = generate_model(opt.model, sample_duration=16)
-    model = generate_model('resnext_onthefly', sample_duration=16)  # Mine
+    model = generate_model('resnext_onthefly', sample_duration=40)  # Mine
 
     if opt.use_ape:
         in_ch = 3
