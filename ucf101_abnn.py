@@ -333,7 +333,7 @@ def get_art_model(
      
     model = OuterModel(weights_path=weights_path, **model_kwargs)
 
-    model.to(opt.device)
+    #model.to(opt.device)
 
     wrapped_model = PyTorchClassifier(
         model,
