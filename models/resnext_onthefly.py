@@ -426,10 +426,11 @@ def resnext101_resnet18():
     return model
 
 
-def resnext101_resnet18_test():
+def resnext101_resnet50_test(sample_duration=40):
     """Constructs a ResNet-101 model.
     """
-    model = ResNeXt_ResNet(n_classes_1=1, n_classes_2=101)
+    model = ResNeXt_ResNet(n_classes_1=1, n_classes_2=101, sample_duration=sample_duration)
 	
     return model
+
 
