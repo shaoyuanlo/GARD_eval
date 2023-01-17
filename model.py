@@ -20,7 +20,7 @@ def generate_model(model_name, sample_duration=40):
         model = resnext_3bn_comb.resnext101_resnet50_test(sample_duration)	
 
     elif model_name == 'resnext_onthefly':
-        model = resnext_onthefly.ResNeXt_ResNet(n_classes_1=3, n_classes_2=101, sample_duration=sample_duration)
+        model = resnext_onthefly.ResNeXt_ResNet(n_classes_1=1, n_classes_2=101, sample_duration=sample_duration)
 
     elif model_name == 'resnext':
         model = resnext.resnet101(
@@ -39,7 +39,7 @@ def generate_model(model_name, sample_duration=40):
             sample_duration=sample_duration)			
 
     #model = model.cuda()
-    model = nn.DataParallel(model, device_ids=None)
+    model = nn.DataParallel(model)
 
     return model
 
